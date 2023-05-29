@@ -1,4 +1,4 @@
-import Contact from "@/components/Contact";
+import Contact from "@/components/Contact/Contact";
 import Menu from "@/components/Menu/Menu";
 import PageWrapper from "@/components/PageWrapper";
 

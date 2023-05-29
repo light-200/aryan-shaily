@@ -13,7 +13,7 @@ export default function About() {
   return (
     <PageWrapper>
       <p className="uppercase md:text-2xl xl:text-3xl row-start-3 selection:bg-black col-span-3">
-        HEY I'M ARYAN SHAILY,
+        HEY I&apos;M ARYAN SHAILY,
         <br />A WEB DEVELOPER AND DESIGNER
         <br />
         FROM INDIA. I LOVE <strong>MUSIC, ART, BOOKS</strong> <br />
@@ -26,8 +26,8 @@ export default function About() {
             !active ? "top-full" : ""
           }`}
         >
-          Well there's not much to know about me as of now. I'll update it as
-          soon as possible though.
+          Well there&apos;s not much to know about me as of now. I&apos;ll
+          update it as soon as possible though.
           <br />
           <br />
           Thanks for showing interest.

@@ -1,8 +1,8 @@
 "use client";
-import PageTitle from "@/components/PageTitle";
 import { useState } from "react";
-import Image from "next/image";
+import PageTitle from "@/components/PageTitle";
 import PageWrapper from "@/components/PageWrapper";
+import ProjectDesc from "@/components/ProjectDesc";
 
 const PROJECTS_LIST = [
   {
@@ -30,10 +30,7 @@ export default function Projects() {
 
   return (
     <PageWrapper>
-      <div className="row-start-2 col-span-2 flex flex-col uppercase text-2xl gap-6">
-        <h3 className="font-bold">About</h3>
-        <p className="">{PROJECTS_LIST[currentProject].desc}</p>
-      </div>
+      <ProjectDesc desc={PROJECTS_LIST[currentProject].desc} />
       <div className="row-start-4 flex flex-col">
         {PROJECTS_LIST.map((project, index) => {
           return (
@@ -48,15 +45,6 @@ export default function Projects() {
             </h1>
           );
         })}
-      </div>
-      <div className="row-start-2 col-start-5 col-span-2">
-        <Image
-          src={""}
-          alt="project ss"
-          width={500}
-          height={300}
-          className="bg-black object-cover"
-        />
       </div>
       <PageTitle>PROJECTS</PageTitle>
     </PageWrapper>
