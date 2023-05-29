@@ -2,6 +2,7 @@
 import PageTitle from "@/components/PageTitle";
 import { useState } from "react";
 import Image from "next/image";
+import PageWrapper from "@/components/PageWrapper";
 
 const PROJECTS_LIST = [
   {
@@ -28,7 +29,7 @@ export default function Projects() {
   };
 
   return (
-    <>
+    <PageWrapper>
       <div className="row-start-2 col-span-2 flex flex-col uppercase text-2xl gap-6">
         <h3 className="font-bold">About</h3>
         <p className="">{PROJECTS_LIST[currentProject].desc}</p>
@@ -58,6 +59,6 @@ export default function Projects() {
         />
       </div>
       <PageTitle>PROJECTS</PageTitle>
-    </>
+    </PageWrapper>
   );
 }

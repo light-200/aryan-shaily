@@ -1,9 +1,10 @@
 import Contact from "@/components/Contact";
 import Menu from "@/components/Menu/Menu";
+import PageWrapper from "@/components/PageWrapper";
 
 export default function Index() {
   return (
-    <>
+    <PageWrapper>
       <Menu />
       <p className="uppercase md:text-2xl row-start-4 selection:bg-black col-span-4">
         LOOKING FOR A <strong>WEB DEVELOPER?</strong>
@@ -19,6 +20,6 @@ export default function Index() {
         ARYAN SHAILY
       </span>
       <Contact />
-    </>
+    </PageWrapper>
   );
 }

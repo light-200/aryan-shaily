@@ -1,8 +1,9 @@
 import PageTitle from "@/components/PageTitle";
+import PageWrapper from "@/components/PageWrapper";
 
 export default function Skills() {
   return (
-    <>
+    <PageWrapper>
       <div className="row-start-2 col-span-2 whitespace-nowrap uppercase xl:text-3xl text-2xl flex flex-col gap-6 mt-20">
         <h3 className="font-bold">design tools</h3>
         <p className="">figma, photoshop, blender</p>
@@ -21,6 +22,6 @@ export default function Skills() {
       </div>
 
       <PageTitle>SKILLS</PageTitle>
-    </>
+    </PageWrapper>
   );
 }

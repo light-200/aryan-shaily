@@ -1,9 +1,10 @@
 import PageTitle from "@/components/PageTitle";
+import PageWrapper from "@/components/PageWrapper";
 import Image from "next/image";
 
 export default function Random() {
   return (
-    <>
+    <PageWrapper>
       <div className="row-start-2 xl:text-3xl text-2xl uppercase mt-10 flex flex-col gap-4">
         <h3 className="font-bold">Favorite Artists</h3>
         <ul>
@@ -57,6 +58,6 @@ export default function Random() {
       </div>
 
       <PageTitle>RANDOM</PageTitle>
-    </>
+    </PageWrapper>
   );
 }

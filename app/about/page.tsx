@@ -3,6 +3,7 @@
 import PageTitle from "@/components/PageTitle";
 import { useState } from "react";
 import Image from "next/image";
+import PageWrapper from "@/components/PageWrapper";
 
 export default function About() {
   const [active, setActive] = useState(false);
@@ -10,7 +11,7 @@ export default function About() {
     setActive((p) => !p);
   };
   return (
-    <>
+    <PageWrapper>
       <p className="uppercase md:text-2xl xl:text-3xl row-start-3 selection:bg-black col-span-3">
         HEY I'M ARYAN SHAILY,
         <br />A WEB DEVELOPER AND DESIGNER
@@ -54,6 +55,6 @@ export default function About() {
           )}
         </span>
       </div>
-    </>
+    </PageWrapper>
   );
 }

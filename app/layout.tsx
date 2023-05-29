@@ -1,7 +1,6 @@
 import Logo from "@/components/Logo";
 import "./globals.css";
 import { Inter } from "next/font/google";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -17,12 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={inter.className + " selection:text-white selection:bg-black"}
+        className={
+          inter.className +
+          " selection:text-white selection:bg-black overflow-hidden"
+        }
       >
-        <main className="grid grid-rows-6 grid-cols-5 min-h-screen p-16 h-screen">
-          <Logo />
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
