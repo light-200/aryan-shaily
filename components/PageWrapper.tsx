@@ -10,7 +10,7 @@ export default function PageWrapper({
   return (
     <>
       <motion.main
-        className="grid grid-rows-6 grid-cols-5 min-h-screen p-16 h-screen"
+        className="grid grid-cols-3 lg:grid-rows-6 lg:grid-cols-5 min-h-screen p-4 lg:p-16 h-screen w-screen max-w-[1920px] xl:m-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 20 }}

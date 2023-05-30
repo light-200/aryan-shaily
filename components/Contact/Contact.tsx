@@ -5,7 +5,7 @@ interface ContactProps {}
 
 const Contact: FunctionComponent<ContactProps> = () => {
   return (
-    <div className="row-start-5 col-start-5 row-span-2 w-60 justify-self-end content-end xl:text-2xl md:text-xl grid text-right">
+    <div className="row-start-3 col-start-3 lg:row-start-5 lg:col-start-5 lg:row-span-2 w-full lg:w-60 justify-self-end content-end xl:text-2xl md:text-xl grid text-right">
       <h3>
         <strong>
           <i>CONTACT</i>
