@@ -12,7 +12,7 @@ export default function About() {
   };
   return (
     <PageWrapper>
-      <p className="uppercase md:text-2xl xl:text-3xl row-start-3 selection:bg-black col-span-3">
+      <p className="uppercase md:text-2xl xl:text-3xl row-start-3 selection:bg-black col-span-3 col-start-1">
         HEY I&apos;M ARYAN SHAILY,
         <br />A WEB DEVELOPER AND DESIGNER
         <br />
@@ -20,9 +20,9 @@ export default function About() {
         AND <strong>FLOWERS.</strong>
       </p>
       <PageTitle>ABOUT</PageTitle>
-      <div className="col-start-4 col-span-2 row-span-5 row-start-5 grid w-full h-full content-end justify-items-center overflow-hidden relative max-w-[500px] justify-self-end">
+      <div className="row-start-3 col-span-2 row-span-2 max-h-[80vh] col-start-2 p-2 place-self-end  lg:col-start-4 lg:col-span-2 lg:row-span-5 lg:row-start-5 grid w-full h-full content-end justify-items-center overflow-hidden relative max-w-[500px] justify-self-end">
         <p
-          className={`w-full flex top-0 overflow-hidden duration-500 transition-all absolute ${
+          className={`w-full flex top-0 overflow-y-scroll duration-500 transition-all absolute p-2 z-10 bg-white ${
             !active ? "top-full" : ""
           }`}
         >
@@ -34,7 +34,7 @@ export default function About() {
         </p>
         <span
           onClick={handleClick}
-          className="bg-white w-full text-center z-10 select-none cursor-pointer font-medium"
+          className="bg-white w-full text-center z-10 select-none cursor-pointer font-medium absolute bottom-0"
         >
           {active ? (
             <span className="grid place-items-center">
