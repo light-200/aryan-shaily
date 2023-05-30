@@ -31,11 +31,11 @@ export default function Projects() {
   return (
     <PageWrapper>
       <ProjectDesc desc={PROJECTS_LIST[currentProject].desc} />
-      <div className="row-start-4 flex flex-col">
+      <div className="lg:row-start-5 row-start-4 flex flex-col justify-end bg-white col-span-3 z-10">
         {PROJECTS_LIST.map((project, index) => {
           return (
             <h1
-              className={`text-3xl uppercase ${
+              className={`text-2xl whitespace-nowrap lg:text-3xl uppercase ${
                 index === currentProject ? "font-bold" : ""
               }`}
               key={project.name}
@@ -46,7 +46,7 @@ export default function Projects() {
           );
         })}
       </div>
-      <PageTitle>PROJECTS</PageTitle>
+      <PageTitle classes={"row-start-5"}>PROJECTS</PageTitle>
     </PageWrapper>
   );
 }
