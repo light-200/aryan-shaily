@@ -20,7 +20,7 @@ export default function About() {
         AND <strong>FLOWERS.</strong>
       </p>
       <PageTitle>ABOUT</PageTitle>
-      <div className="row-start-3 col-span-2 row-span-2 max-h-[80vh] col-start-2 p-2 place-self-end  lg:col-start-4 lg:col-span-2 lg:row-span-5 lg:row-start-5 grid w-full h-full content-end justify-items-center overflow-hidden relative max-w-[500px] justify-self-end">
+      <div className="row-start-3 col-span-2 row-span-2 max-h-[80vh] col-start-2 p-2 place-self-end  lg:col-start-4 lg:col-span-2 lg:row-span-5 lg:row-start-5 grid w-full h-full content-end justify-items-center overflow-hidden relative max-w-[500px] justify-self-end uppercase">
         <p
           className={`w-full flex top-0 overflow-y-auto scroll duration-500 transition-all absolute p-2 z-10 bg-white ${
             !active ? "top-full" : ""

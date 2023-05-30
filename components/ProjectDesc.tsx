@@ -3,7 +3,13 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { motion, useAnimationControls } from "framer-motion";
 
-export default function ProjectDesc({ desc }: { desc: string }) {
+export default function ProjectDesc({
+  desc,
+  image,
+}: {
+  desc: string;
+  image: string;
+}) {
   const control = useAnimationControls();
   const control2 = useAnimationControls();
 
@@ -21,7 +27,7 @@ export default function ProjectDesc({ desc }: { desc: string }) {
 
   return (
     <>
-      <div className="row-start-3 h-64 lg:row-start-2 col-span-full lg:col-span-2 flex flex-col uppercase text-xl lg:text-2xl gap-3 lg:gap-6">
+      <div className="row-start-3 h-64 mt-6 lg:mt-0 lg:row-start-2 col-span-full lg:col-span-2 flex flex-col uppercase text-xl lg:text-2xl gap-3 lg:gap-6">
         <h3 className="font-bold">About</h3>
         <motion.p animate={control} className="overflow-y-auto">
           {desc}
@@ -29,14 +35,14 @@ export default function ProjectDesc({ desc }: { desc: string }) {
       </div>
       <motion.div
         animate={control2}
-        className="row-start-2 lg:col-start-5 col-span-3 lg:col-span-2 mt-4"
+        className="row-start-2 lg:col-start-4 col-span-3 lg:col-span-2 mt-4 relative"
       >
         <Image
-          src={""}
+          src={image}
           alt="project ss"
-          width={500}
-          height={300}
-          className="bg-black object-cover min-h-[200px] aspect-video"
+          width={700}
+          height={500}
+          className="bg-black object-cover min-h-[200px] aspect-video "
         />
       </motion.div>
     </>
