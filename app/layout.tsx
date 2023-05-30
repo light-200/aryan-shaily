@@ -18,7 +18,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " selection:text-white selection:bg-black overflow-hidden"
+          " selection:text-white selection:bg-black lg:overflow-hidden overflow-y-auto"
         }
       >
         {children}
