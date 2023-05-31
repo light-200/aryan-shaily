@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Logo from "./Logo";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import GridAnim from "./GridAnim";
 
 export default function PageWrapper({
   children,
@@ -29,6 +30,7 @@ export default function PageWrapper({
         }}
         exit={{ opacity: 0, y: 20 }}
       >
+        <GridAnim />
         <Image
           src={"/artifact01.svg"}
           alt="svg"
