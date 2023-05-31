@@ -1,6 +1,8 @@
 "use client";
-import { AnimatePresence, easeInOut, easeOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Logo from "./Logo";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function PageWrapper({
   children,
@@ -9,11 +11,14 @@ export default function PageWrapper({
   children: React.ReactNode;
   className?: String;
 }) {
+  const location = usePathname();
+  const PATH_FOR_BOTTOM_SVG = ["/", "/about"];
+
   return (
     <>
       <motion.main
         className={
-          "grid grid-cols-3 lg:grid-rows-6 lg:grid-cols-5 min-h-screen p-4 lg:p-16 h-screen w-screen max-w-[1920px] xl:m-auto" +
+          "grid grid-cols-3 lg:grid-rows-6 lg:grid-cols-5 min-h-screen p-4 lg:p-16 h-screen w-screen max-w-[1920px] xl:m-auto relative overflow-hidden " +
           className
         }
         initial={{ opacity: 0, y: 20 }}
@@ -24,6 +29,21 @@ export default function PageWrapper({
         }}
         exit={{ opacity: 0, y: 20 }}
       >
+        <Image
+          src={"/artifact01.svg"}
+          alt="svg"
+          width={200}
+          height={200}
+          className="absolute -top-2 -left-2 lg:w-[600px] select-none"
+        />
+        <Image
+          src={"/artifact01.svg"}
+          alt="svg"
+          width={200}
+          height={200}
+          className={`absolute -bottom-2 -right-2 lg:w-[600px] select-none scale-x-[-1] scale-y-[-1] 
+             ${PATH_FOR_BOTTOM_SVG.includes(location) ? "hidden" : ""}`}
+        />
         <Logo />
         {children}
       </motion.main>

@@ -7,7 +7,7 @@ const Logo: FunctionComponent<LogoProps> = () => {
   return (
     <Link
       href={"/"}
-      className="text-2xl bg-black text-white h-min select-none w-min"
+      className="text-2xl bg-black text-white h-min select-none w-min z-10"
     >
       ARYAN
     </Link>
