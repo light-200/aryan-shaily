@@ -16,12 +16,12 @@ export default function ProjectDesc({
   useEffect(() => {
     control.start({
       opacity: [0, 1],
-      y: [5, 0],
-      transition: { duration: 0.5, ease: "anticipate" },
+      y: [3, 0],
+      transition: { duration: 0.5 },
     });
     control2.start({
       scale: [0.99, 1],
-      transition: { duration: 0.5, ease: "anticipate" },
+      transition: { duration: 0.5 },
     });
   }, [desc]);
 
