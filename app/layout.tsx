@@ -1,4 +1,3 @@
-import GridAnim from "@/components/GridAnim";
 import "./globals.css";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
@@ -6,6 +5,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "ARYAN",
   description: "WEB DEVELOPMENT AND DESIGN PORTFOLIO OF ARYAN SHAILY",
+  themeColor: "white",
+  creator: "Aryan Shaily",
 };
 
 export default function RootLayout({
