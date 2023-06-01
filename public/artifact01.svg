@@ -1,9 +1,9 @@
-<svg width="390" height="265" viewBox="0 0 390 265" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="-311" y="-183" width="350" height="223.711" stroke="url(#paint0_linear_29_21)" stroke-dasharray="2 2"/>
-<rect x="39" y="40.7113" width="350" height="223.711" stroke="url(#paint1_linear_29_21)" stroke-dasharray="2 2"/>
-<circle cx="39" cy="40.7113" r="23.5114" transform="rotate(-1.23381 39 40.7113)" stroke="url(#paint2_angular_29_21)" stroke-dasharray="2 2"/>
+<svg width="310" height="248" viewBox="0 0 310 248" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M39 0V40.7113H0" stroke="url(#paint0_linear_29_21)" stroke-dasharray="2 2"/>
+<path d="M310 40.7113C189.5 40.7113 39 40.7113 39 40.7113L39 248" stroke="url(#paint1_linear_29_21)" stroke-dasharray="2 2"/>
+<path d="M62.506 40.2051C62.2264 27.2231 51.4757 16.9257 38.4937 17.2053C25.5117 17.4849 15.2144 28.2356 15.494 41.2176C15.7736 54.1996 26.5242 64.4969 39.5062 64.2173" stroke="black" stroke-dasharray="2 2"/>
 <defs>
-<linearGradient id="paint0_linear_29_21" x1="29.9794" y1="29.8866" x2="-112.546" y2="-101.814" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_29_21" x1="29.9795" y1="29.8867" x2="-112.546" y2="-101.814" gradientUnits="userSpaceOnUse">
 <stop/>
 <stop offset="1" stop-opacity="0"/>
 </linearGradient>
@@ -11,10 +11,5 @@
 <stop/>
 <stop offset="1" stop-opacity="0"/>
 </linearGradient>
-<radialGradient id="paint2_angular_29_21" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(39 40.7113) rotate(90) scale(39.3561)">
-<stop/>
-<stop offset="0.75" stop-opacity="0"/>
-<stop offset="1" stop-opacity="0"/>
-</radialGradient>
 </defs>
 </svg>

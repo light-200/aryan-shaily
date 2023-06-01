@@ -34,16 +34,16 @@ export default function PageWrapper({
         <Image
           src={"/artifact01.svg"}
           alt="svg"
-          width={200}
-          height={200}
-          className="absolute -top-2 -left-2 lg:w-[600px] select-none"
+          width={150}
+          height={150}
+          className="absolute -top-2 -left-1 lg:w-[440px] select-none"
         />
         <Image
           src={"/artifact01.svg"}
           alt="svg"
-          width={200}
-          height={200}
-          className={`absolute -bottom-2 -right-2 lg:w-[600px] select-none scale-x-[-1] scale-y-[-1] 
+          width={150}
+          height={150}
+          className={`absolute -bottom-2 -right-2 lg:w-[440px] select-none scale-x-[-1] scale-y-[-1] 
              ${PATH_FOR_BOTTOM_SVG.includes(location) ? "hidden" : ""}`}
         />
         <Logo />

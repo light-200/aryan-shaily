@@ -27,8 +27,8 @@ export default function About() {
           }`}
         >
           I am an enthusiastic <b>learner</b> and a computer science student, I
-          love to try new things. I like to <b>read books</b> although I'm a
-          very slow reader and I also like to type fast and I keep visiting
+          love to try new things. I like to <b>read books</b> although I&apos;m
+          a very slow reader and I also like to type fast and I keep visiting
           monkeytype for that.
           <br />
           Apart from computer science I also like <b>graphic designing</b>,

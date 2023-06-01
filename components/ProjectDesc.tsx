@@ -23,7 +23,7 @@ export default function ProjectDesc({
       scale: [0.99, 1],
       transition: { duration: 0.5 },
     });
-  }, [desc]);
+  }, [desc, control, control2]);
 
   return (
     <>
