@@ -28,7 +28,7 @@ export default function ImageViewer() {
   };
 
   return (
-    <div className="flex gap-2 lg:overflow-hidden">
+    <div className="flex gap-2 lg:overflow-hidden z-10">
       <Image
         src={FAV_IMAGES[currentImg]}
         width={300}

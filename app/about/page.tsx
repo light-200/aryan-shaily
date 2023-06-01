@@ -20,17 +20,23 @@ export default function About() {
         AND <strong>FLOWERS.</strong>
       </p>
       <PageTitle>ABOUT</PageTitle>
-      <div className="row-start-3 col-span-2 row-span-2 max-h-[80vh] col-start-2 p-2 place-self-end  lg:col-start-4 lg:col-span-2 lg:row-span-5 lg:row-start-5 grid w-full h-full content-end justify-items-center overflow-hidden relative max-w-[500px] justify-self-end uppercase">
+      <div className="row-start-3 col-span-2 row-span-2 max-h-[80vh] col-start-2 p-2 place-self-end  lg:col-start-4 lg:col-span-2 lg:row-span-5 lg:row-start-3 grid w-full h-full content-end justify-items-center overflow-hidden relative max-w-[500px] justify-self-end uppercase z-10">
         <p
-          className={`w-full flex top-0 overflow-y-auto scroll duration-500 transition-all absolute p-2 z-10 bg-white ${
+          className={`w-full top-0 overflow-y-auto scroll duration-500 transition-all absolute p-2 z-10 bg-white ${
             !active ? "top-full" : ""
           }`}
         >
-          Well there&apos;s not much to know about me as of now. I&apos;ll
-          update it as soon as possible though.
+          I am an enthusiastic <b>learner</b> and a computer science student, I
+          love to try new things. I like to <b>read books</b> although I'm a
+          very slow reader and I also like to type fast and I keep visiting
+          monkeytype for that.
+          <br />
+          Apart from computer science I also like <b>graphic designing</b>,
+          modern brutalism and <b>minimal designs</b> are my favorite. I also
+          like <b>photography</b> my photographs are mostly black and white.
           <br />
           <br />
-          Thanks for showing interest.
+          Thanks for reading.
         </p>
         <span
           onClick={handleClick}

@@ -6,7 +6,7 @@ export default function Index() {
   return (
     <PageWrapper>
       <Menu />
-      <p className="uppercase md:text-2xl xl:row-start-4 selection:bg-black col-span-2 xl:col-span-4 ">
+      <p className="uppercase md:text-2xl xl:row-start-4 selection:bg-black col-span-2 xl:col-span-4">
         LOOKING FOR A <strong>WEB DEVELOPER?</strong>
         <br />
         <br />
