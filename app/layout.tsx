@@ -23,14 +23,17 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " selection:text-white selection:bg-black overflow-x-hidden scroll-smooth bg-black text-white"
+          " selection:text-white selection:bg-black overflow-x-hidden scroll-smooth bg-[#121212] text-white text-opacity-80"
         }
       >
         {children}
-        <footer className="grid grid-cols-3 p-2 lg:p-6">
+        <footer className="grid grid-cols-3 p-2 lg:p-6 border-[1px] border-transparent border-t-zinc-600">
           <div>
             <h3>Aryan Shaily</h3>
-            <p>All rights reserved</p>
+            <p className="lg:w-5/6">
+              I'm a 21yo Web developer/designer. Looking forward to solve your
+              problems with design and tech.
+            </p>
           </div>
           <div>
             <h3 className="font-semibold">Navigation Links</h3>
