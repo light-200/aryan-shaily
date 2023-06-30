@@ -7,3 +7,19 @@
     @apply px-1 cursor-pointer hover:opacity-95 active:scale-95 origin-left select-none;
   }
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 5px;
+}
