@@ -55,45 +55,46 @@ export default function Index() {
             </AboutCard>
 
             <AboutCard>
-              Hey I&apos;m a web developer and designer from India, I love
-              music, art, books and flowers.
-              <br />
-              <br />I use figma for designing websites and react and nextjs to
-              turn the design into a fully functional web app.
-              <br />
-              <br />I prefer minimal designs and impactful projects.
+              <p>
+                Hey I&apos;m a web developer and designer from India, I love
+                music, art, books and flowers.
+              </p>
+              <p>
+                I use figma for designing websites and react and nextjs to turn
+                the design into a fully functional web app.
+              </p>
+              <p>I prefer minimal designs and impactful projects.</p>
             </AboutCard>
 
             <AboutCard>
-              Favorite Artists
-              <br />
-              The 1975, TNBHD, Current Joys
-              <br />
-              <br />
-              Favorite Stories
-              <br />
-              The Great Gatsby, Tamasha
-              <br />
-              <br />
-              Favorite Song
-              <br />A Different Age
+              <div>
+                <h1>Favorite Artists</h1>
+                <p>The 1975, TNBHD, Current Joys</p>
+              </div>
+              <div>
+                <h1>Favorite Stories</h1>
+                <p>The Great Gatsby, Tamasha</p>
+              </div>
+              <div>
+                <h1>Favorite Song</h1>
+                <p>A Different Age</p>
+              </div>
               <span className="absolute right-3 bottom-2">Random</span>
             </AboutCard>
 
             <AboutCard>
-              Design Tools
-              <br />
-              Figma, Photoshop, Blender
-              <br />
-              <br />
-              Frameworks
-              <br />
-              Nextjs, Reactjs, React-native
-              <br />
-              <br />
-              Languages
-              <br />
-              Javascript, Python, Java, C++
+              <div>
+                <h1>Design Tools</h1>
+                <p>Figma, Photoshop, Blender</p>
+              </div>
+              <div>
+                <h1>Frameworks</h1>
+                <p>Nextjs, Reactjs, React-native</p>
+              </div>
+              <div>
+                <h1>Languages</h1>
+                <p>Javascript, Python, Java, C++</p>
+              </div>
               <span className="absolute right-3 bottom-2">Skills</span>
             </AboutCard>
           </div>
@@ -118,6 +119,10 @@ export default function Index() {
               "Graphql",
               "Next-auth",
             ]}
+            ProjectLinks={{
+              github: "https://github.com/light-200/type-master",
+              live: "https://light-200.github.io/type-master/",
+            }}
           />
           <ProjectCard
             ProjectName={"TheindianScholar"}
