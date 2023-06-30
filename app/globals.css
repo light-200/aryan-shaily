@@ -9,6 +9,9 @@
   h1 {
     @apply pb-1;
   }
+  input {
+    @apply border-2 border-zinc-300;
+  }
 }
 
 * {

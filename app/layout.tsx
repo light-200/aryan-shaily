@@ -7,8 +7,8 @@ const inter = Share_Tech({
 });
 
 export const metadata = {
-  title: "ARYAN",
-  description: "WEB DEVELOPMENT AND DESIGN PORTFOLIO OF ARYAN SHAILY",
+  title: "Aryan",
+  description: "Web development and design portfolio of Aryan Shaily.",
   themeColor: "white",
   creator: "Aryan Shaily",
 };
@@ -27,7 +27,7 @@ export default function RootLayout({
         }
       >
         {children}
-        <footer className="grid grid-cols-3 p-2 lg:p-6 border-[1px] border-transparent border-t-zinc-600">
+        <footer className="grid grid-cols-3 p-2 lg:p-6 border-[1px] border-transparent border-t-zinc-600 h-[400px] justify-items-center">
           <div>
             <h3>Aryan Shaily</h3>
             <p className="lg:w-5/6">

@@ -13,6 +13,8 @@ export default function Index() {
     setService(e.currentTarget.innerHTML);
   };
 
+  const triggerAnimation = () => {};
+
   return (
     <main className="w-full">
       <section className="grid min-h-screen w-full grid-cols-2 auto-rows-min relative items-center">
@@ -158,28 +160,28 @@ export default function Index() {
           <span>Services</span>
         </div>
         <div className="rows-start-2 w-60 justify-self-end relative">
-          <div className="hidden lg:block absolute -top-10 -right-10 border-2 rounded-md border-zinc-300 border-r-0 border-b-0 rounded-bl-none w-32 h-10 -z-1"></div>
-          <ul className="flex flex-col  p-4 gap-2 rounded-md bg-zinc-300 text-black z-0">
+          <div className="hidden lg:flex justify-center items-center absolute -top-10 -right-10 border-2 rounded-md border-zinc-400 border-r-0 border-b-0 rounded-bl-none w-32 h-10 -z-1 select-none"></div>
+          <ul className="flex flex-col  p-4 gap-2 rounded-md bg-zinc-200 text-black z-0 border-zinc-400 border-2">
             <li
-              className="bg-zinc-200 border-[1px] border-zinc-400 px-2 p-1 rounded-md"
+              className="bg-zinc-100 border-[1px] border-zinc-400 px-2 p-1 rounded-md cursor-pointer active:scale-95 transition-all duration-150 ease-in-out select-none"
               onClick={handleServiceSelection}
             >
               Websites
             </li>
             <li
-              className="bg-zinc-200 border-[1px] border-zinc-400 px-2 p-1 rounded-md"
+              className="bg-zinc-100 border-[1px] border-zinc-400 px-2 p-1 rounded-md cursor-pointer active:scale-95 transition-all duration-150 ease-in-out select-none"
               onClick={handleServiceSelection}
             >
               Web Design / UI-UX
             </li>
             <li
-              className="bg-zinc-200 border-[1px] border-zinc-400 px-2 p-1 rounded-md"
+              className="bg-zinc-100 border-[1px] border-zinc-400 px-2 p-1 rounded-md cursor-pointer active:scale-95 transition-all duration-150 ease-in-out select-none"
               onClick={handleServiceSelection}
             >
               Graphic Design
             </li>
             <li
-              className="bg-zinc-200 border-[1px] border-zinc-400 px-2 p-1 rounded-md"
+              className="bg-zinc-100 border-[1px] border-zinc-400 px-2 p-1 rounded-md cursor-pointer active:scale-95 transition-all duration-150 ease-in-out select-none"
               onClick={handleServiceSelection}
             >
               App Development
