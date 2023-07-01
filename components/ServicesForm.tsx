@@ -89,7 +89,7 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
           type="submit"
           value="submit"
           onClick={handleSubmit}
-          className="bg-zinc-300 rounded-md p-1 px-2 shadow-sm active:bg-zinc-400"
+          className="bg-zinc-200 rounded-md p-1 px-2 shadow-sm active:bg-zinc-300 border-zinc-400 border-2 active:scale-95"
         />
       </div>
     </form>

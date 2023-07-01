@@ -14,27 +14,29 @@ const Space: FunctionComponent<SpaceProps> = () => {
       <p className="text-xl mb-6">
         Hey I'm Aryan Shaily. A creative frontend developer based in India.
       </p>
-      <div className="flex gap-4 text-4xl mb-10">
-        <Link href={"https://github.com/light-200"} target="_blank">
+      <div className="flex flex-col h-full justify-between gap-24">
+        <div className="flex gap-4 text-4xl">
+          <Link href={"https://github.com/light-200"} target="_blank">
+            <BsGithub />
+          </Link>
+          <Link
+            href={"https://www.linkedin.com/in/aryan-shaily/"}
+            target="_blank"
+          >
+            <BsLinkedin />
+          </Link>
+        </div>
+        <div className="flex gap-4 text-4xl items-center">
+          <span className="pr-3 border-r-2 border-zinc-300 text-lg select-none">
+            Tech Stack
+          </span>
+          <FaReact />
+          <TbBrandNextjs />
+          <SiTailwindcss />
           <BsGithub />
-        </Link>
-        <Link
-          href={"https://www.linkedin.com/in/aryan-shaily/"}
-          target="_blank"
-        >
-          <BsLinkedin />
-        </Link>
-      </div>
-      <div className="flex gap-4 text-4xl items-center">
-        <span className="pr-3 border-r-2 border-zinc-300 text-2xl">
-          Tech Stack
-        </span>
-        <FaReact />
-        <TbBrandNextjs />
-        <SiTailwindcss />
-        <BsGithub />
-        <BsGit />
-        <FaFigma />
+          <BsGit />
+          <FaFigma />
+        </div>
       </div>
     </div>
   );
