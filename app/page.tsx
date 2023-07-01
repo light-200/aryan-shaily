@@ -5,6 +5,10 @@ import ServicesForm from "@/components/ServicesForm";
 import Space from "@/components/Space";
 import Link from "next/link";
 import { SyntheticEvent, useState } from "react";
+import { BsGithub, BsLinkedin, BsGit } from "react-icons/bs";
+import { FaReact, FaFigma } from "react-icons/fa";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiTailwindcss } from "react-icons/si";
 
 export default function Index() {
   const [service, setService] = useState("");
@@ -17,13 +21,13 @@ export default function Index() {
 
   return (
     <main className="w-full">
-      <section className="grid min-h-screen w-full grid-cols-2 auto-rows-min relative items-center">
-        <div className="col-span-2 flex justify-between items-center lg:px-8 px-2  p-3">
+      <section className="grid max-h-screen h-screen w-full grid-cols-2 grid-rows-[min-content_1fr_1fr] relative items-center">
+        <div className="col-span-2 flex justify-between items-baseline lg:px-8 p-2">
           <div>
-            <span className="text-2xl">Aryan</span>
+            <span className="lg:text-2xl text-xl">Aryan</span>
           </div>
           <div className="justify-self-end">
-            <ul className="w-fit flex gap-4">
+            <ul className="w-fit flex lg:gap-4">
               <Link href="#about" className="btn-primary">
                 About
               </Link>
@@ -40,6 +44,19 @@ export default function Index() {
           </div>
         </div>
         <Space />
+        <div className="row-start-3 col-span-2 w-full grid lg:place-content-center p-2">
+          <div className="flex lg:gap-4 gap-2 lg:text-4xl text-2xl items-center md:w-[600px] mb-16 justify-between whitespace-nowrap">
+            <span className="lg:pr-3 border-r-2 border-zinc-300 text-xl select-none">
+              Tech Stack
+            </span>
+            <FaReact />
+            <TbBrandNextjs />
+            <SiTailwindcss />
+            <BsGithub />
+            <BsGit />
+            <FaFigma />
+          </div>
+        </div>
       </section>
       <section
         className="min-h-screen w-full p-2 lg:p-6 flex flex-col relative"
@@ -49,7 +66,7 @@ export default function Index() {
           <span>About</span>
         </div>
         <div className="flex justify-center items-center h-[100%] flex-grow">
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid lg:grid-cols-4 gap-6 my-40 lg:my-0">
             <AboutCard>
               <span className="absolute right-3 bottom-2">
                 Aryan Shaily, 21
@@ -103,13 +120,13 @@ export default function Index() {
         </div>
       </section>
       <section
-        className="grid min-h-screen w-full p-2 lg:p-6 grid-cols-3 grid-rows-[max-content_1fr] gap-4 place-items-center"
+        className="grid min-h-screen w-full p-2 lg:p-6 lg:grid-cols-3 grid-rows-[max-content_1fr] gap-4 place-items-center"
         id="project"
       >
-        <div className="col-span-3 w-full h-full">
+        <div className="lg:col-span-3 w-full h-full">
           <span>Projects</span>
         </div>
-        <div className="col-span-3 w-full flex gap-16 justify-center">
+        <div className="lg:col-span-3 w-full flex flex-col lg:flex-row lg:gap-16 gap-4 my-40 lg:my-0 justify-center">
           <ProjectCard
             ProjectName={"TheindianScholar"}
             ProjectImage={"/someimage"}
@@ -153,13 +170,13 @@ export default function Index() {
         </div>
       </section>
       <section
-        className="grid auto-rows-[min-content_1fr] gap-6 grid-cols-[1fr_2fr] place-items-center min-h-screen w-full p-2 lg:p-6"
+        className="grid auto-rows-[min-content_1fr] gap-6  lg:grid-cols-[1fr_2fr] grid-cols-1 place-items-center min-h-screen w-full p-2 lg:p-6"
         id="services"
       >
-        <div className="col-span-2 w-full">
+        <div className="lg:col-span-2 w-full">
           <span>Services</span>
         </div>
-        <div className="rows-start-2 w-60 justify-self-end relative">
+        <div className="row-start-2 lg:w-60 w-full justify-self-end relative mt-40 lg:mt-0">
           <div className="hidden lg:flex justify-center items-center absolute -top-10 -right-10 border-2 rounded-md border-zinc-400 border-r-0 border-b-0 rounded-bl-none w-32 h-10 -z-1 select-none"></div>
           <ul className="flex flex-col  p-4 gap-2 rounded-md bg-zinc-200 text-black z-0 border-zinc-400 border-2">
             <li
@@ -189,7 +206,7 @@ export default function Index() {
           </ul>
         </div>
 
-        <div className="lg:rows-start-2 lg:col-start-2 lg:col-span-1 row-strat-3 col-span-2 w-full h-[90%] justify-self-center">
+        <div className="lg:row-start-2 lg:col-start-2 lg:col-span-1 row-start-3 w-full lg:h-[90%] justify-self-center mb-40 lg:mb-0">
           <ServicesForm selectedService={service} />
         </div>
       </section>

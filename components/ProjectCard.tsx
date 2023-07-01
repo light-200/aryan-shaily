@@ -25,7 +25,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
   ProjectStack,
 }) => {
   return (
-    <div className="flex flex-col w-[340px] h-[450px] bg-zinc-200 rounded-md border-zinc-500 gap-1 border-2 p-2 text-black items-center relative">
+    <div className="flex flex-col max-w-[340px] w-full h-[450px] bg-zinc-200 rounded-md border-zinc-500 gap-1 border-2 p-2 text-black items-center relative">
       <h1 className="text-left w-full text-lg">{ProjectName}</h1>
       <Image
         height={190}

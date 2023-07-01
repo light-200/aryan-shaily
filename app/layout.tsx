@@ -27,8 +27,8 @@ export default function RootLayout({
         }
       >
         {children}
-        <footer className="grid grid-cols-3 p-2 lg:p-6 border-[1px] border-transparent border-t-zinc-600 h-[400px] justify-items-center">
-          <div>
+        <footer className="grid lg:grid-cols-3 grid-cols-2 p-2 lg:p-6 border-[1px] border-transparent border-t-zinc-600 h-[400px] lg:justify-items-center">
+          <div className="lg:col-span-1 col-span-2">
             <h3>Aryan Shaily</h3>
             <p className="lg:w-5/6">
               I'm a 21yo Web developer/designer. Looking forward to solve your
@@ -44,7 +44,7 @@ export default function RootLayout({
               <li>Services</li>
             </ul>
           </div>
-          <div>
+          <div className="justify-self-end text-right">
             <h3 className="font-semibold">Contact Links</h3>
             <ul className="flex flex-col">
               <li>Twitter</li>

@@ -1,21 +1,20 @@
 import Link from "next/link";
-import { FunctionComponent, Suspense, useRef } from "react";
-import { BsGithub, BsLinkedin, BsGit } from "react-icons/bs";
-import { FaReact, FaFigma } from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiTailwindcss } from "react-icons/si";
+import { FunctionComponent } from "react";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 interface SpaceProps {}
 
 const Space: FunctionComponent<SpaceProps> = () => {
   return (
-    <div className="w-full h-[82vh] grid gap-2 place-content-center  col-span-2">
-      <h1 className="text-4xl font-bold mb-2">Nextjs Frontend Developer</h1>
-      <p className="text-xl mb-6">
+    <div className="w-full h-[82vh] grid gap-2 place-content-center  col-span-2 p-2 lg:p-0">
+      <h1 className="lg:text-4xl text-2xl font-bold mb-2">
+        Nextjs Frontend Developer
+      </h1>
+      <p className="lg:text-xl text-lg mb-6 w-full md:w-[600px]">
         Hey I'm Aryan Shaily. A creative frontend developer based in India.
       </p>
       <div className="flex flex-col h-full justify-between gap-24">
-        <div className="flex gap-4 text-4xl">
+        <div className="flex gap-4 lg:text-4xl text-2xl">
           <Link href={"https://github.com/light-200"} target="_blank">
             <BsGithub />
           </Link>
@@ -25,17 +24,6 @@ const Space: FunctionComponent<SpaceProps> = () => {
           >
             <BsLinkedin />
           </Link>
-        </div>
-        <div className="flex gap-4 text-4xl items-center">
-          <span className="pr-3 border-r-2 border-zinc-300 text-lg select-none">
-            Tech Stack
-          </span>
-          <FaReact />
-          <TbBrandNextjs />
-          <SiTailwindcss />
-          <BsGithub />
-          <BsGit />
-          <FaFigma />
         </div>
       </div>
     </div>
