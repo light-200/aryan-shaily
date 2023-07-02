@@ -126,7 +126,7 @@ export default function Index() {
         <div className="lg:col-span-3 w-full h-full">
           <span>Projects</span>
         </div>
-        <div className="lg:col-span-3 w-full flex flex-col lg:flex-row lg:gap-16 gap-4 my-40 lg:my-0 justify-center">
+        <div className="lg:col-span-3 w-full flex flex-col lg:flex-row lg:gap-16 gap-4 my-40 lg:my-0 justify-center place-items-center">
           <ProjectCard
             ProjectName={"TheindianScholar"}
             ProjectImage={"/someimage"}

@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " selection:text-white selection:bg-black overflow-x-hidden scroll-smooth bg-[#121212] text-white text-opacity-80"
+          " selection:text-white selection:bg-black overflow-x-hidden scroll-smooth bg-[#121212] text-white text-opacity-80 lg:p-0 p-2"
         }
       >
         {children}
