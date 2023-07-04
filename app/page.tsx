@@ -44,7 +44,7 @@ export default function Index() {
           </div>
         </div>
         <Space />
-        <div className="row-start-3 col-span-2 w-full grid lg:place-content-center p-2">
+        <div className="row-start-3 col-span-2 w-full grid place-content-center lg:place-content-center p-2">
           <div className="flex lg:gap-4 gap-2 lg:text-4xl text-2xl items-center md:w-[600px] mb-16 justify-between whitespace-nowrap">
             <span className="lg:pr-3 border-r-2 border-zinc-300 text-xl select-none">
               Tech Stack
