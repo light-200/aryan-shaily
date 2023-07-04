@@ -1,10 +1,6 @@
 "use client";
-import {
-  ChangeEventHandler,
-  FunctionComponent,
-  SyntheticEvent,
-  useState,
-} from "react";
+import { FunctionComponent, useRef, useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 interface ServicesFormProps {
   selectedService?: string;
@@ -16,24 +12,26 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [state, handleSubmit] = useForm(
+    process.env.NEXT_PUBLIC_FORMSPREE_ID || ""
+  );
 
-  const handleSubmit = (e: SyntheticEvent) => {
-    e.preventDefault();
-    let data = {
-      userName,
-      email,
-      message,
-    };
-  };
+  const form = useRef(null);
 
   return (
-    <form className="w-full h-max grid  lg:grid-rows-[min-content_min-content_1fr] grid-cols-1 lg:grid-cols-2 gap-4 gap-x-8 p-4 rounded-md bg-zinc-200 text-black max-w-4xl relative select-none border-zinc-400 border-2">
-      <div className="flex flex-col gap-1">
+    <form
+      ref={form}
+      method="post"
+      className="w-full h-max grid  lg:grid-rows-[min-content_min-content_1fr] grid-cols-1 lg:grid-cols-2 gap-4 gap-x-8 p-4 rounded-md bg-zinc-200 text-black max-w-4xl relative select-none border-zinc-400 border-2"
+      onSubmit={handleSubmit}
+    >
+      <fieldset className="flex flex-col gap-1">
         <label htmlFor="name">Name</label>
         <input
           type="text"
           name="name"
           id="name"
+          required={true}
           value={userName}
           onChange={(e) => {
             setUserName(e.target.value);
@@ -41,7 +39,7 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
           className="rounded-md p-2 bg-zinc-100 focus:outline-zinc-400"
           placeholder="your name..."
         />
-      </div>
+      </fieldset>
       <div className="flex flex-col gap-1">
         <label htmlFor="email">Email</label>
         <input
@@ -74,6 +72,7 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
           name="message"
           id="message"
           value={message}
+          required={true}
           onChange={(e) => {
             setMessage(e.target.value);
           }}
@@ -84,14 +83,11 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
           className="w-full rounded-md p-4 bg-zinc-100 focus:outline-zinc-400 border-zinc-300 border-2"
         ></textarea>
       </div>
-      <div className="absolute bottom-6 right-6 text-lg">
-        <input
-          type="submit"
-          value="submit"
-          onClick={handleSubmit}
-          className="bg-zinc-200 rounded-md p-1 px-2 shadow-sm active:bg-zinc-300 border-zinc-400 border-2 active:scale-95"
-        />
-      </div>
+      <input
+        type="submit"
+        value={state.succeeded ? "sent" : "send"}
+        className="bg-zinc-200 rounded-md p-1 px-2 shadow-sm active:bg-zinc-300 border-zinc-400 border-2 active:scale-95 absolute bottom-6 right-6 text-lg"
+      />
     </form>
   );
 };

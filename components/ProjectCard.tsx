@@ -57,6 +57,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
         {ProjectLinks?.github && (
           <Link
             href={ProjectLinks.github}
+            target="_blank"
             className="hover:scale-105 transition-all duration-150 ease-in-out"
           >
             <BsGithub />

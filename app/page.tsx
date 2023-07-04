@@ -129,7 +129,7 @@ export default function Index() {
         <div className="lg:col-span-3 w-full flex flex-col lg:flex-row lg:gap-16 gap-4 my-40 lg:my-0 justify-center place-items-center">
           <ProjectCard
             ProjectName={"TheindianScholar"}
-            ProjectImage={"/someimage"}
+            ProjectImage={"/0.jpg"}
             ProjectDesc={"A blogging website made for the indian students."}
             ProjectStack={[
               "Nextjs",
@@ -139,33 +139,31 @@ export default function Index() {
               "Next-auth",
             ]}
             ProjectLinks={{
+              live: "https://www.theindianscholar.com/",
+            }}
+          />
+          <ProjectCard
+            ProjectName={"type-master"}
+            ProjectImage={"/1.jpg"}
+            ProjectDesc={
+              "A website to test your typing speed and improve upon it. Made using vanilla javascript and html, css. It also has firebase integration and users can signup to the website and have their name shown on the leaderboard."
+            }
+            ProjectStack={["javascript", "css", "firebase", "socket.io"]}
+            ProjectLinks={{
               github: "https://github.com/light-200/type-master",
               live: "https://light-200.github.io/type-master/",
             }}
           />
           <ProjectCard
-            ProjectName={"TheindianScholar"}
-            ProjectImage={"/someimage"}
-            ProjectDesc={"A blogging website made for the indian students."}
-            ProjectStack={[
-              "Nextjs",
-              "Tailwind",
-              "Hygraph",
-              "Graphql",
-              "Next-auth",
-            ]}
-          />
-          <ProjectCard
-            ProjectName={"TheindianScholar"}
-            ProjectImage={"/someimage"}
-            ProjectDesc={"A blogging website made for the indian students."}
-            ProjectStack={[
-              "Nextjs",
-              "Tailwind",
-              "Hygraph",
-              "Graphql",
-              "Next-auth",
-            ]}
+            ProjectName={"Indie-uber"}
+            ProjectImage={"/2.jpg"}
+            ProjectDesc={
+              "An uber clone made using react native and firebase, it is a multipage application with nested navigation and firebase authentication."
+            }
+            ProjectStack={["firebase", "react-native", "tailwind"]}
+            ProjectLinks={{
+              github: "https://github.com/light-200/indie-uber",
+            }}
           />
         </div>
       </section>
