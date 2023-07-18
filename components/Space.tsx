@@ -11,7 +11,7 @@ const Space: FunctionComponent<SpaceProps> = () => {
         Nextjs Frontend Developer
       </h1>
       <p className="lg:text-xl text-lg mb-6 w-full md:w-[600px]">
-        Hey I'm Aryan Shaily. A creative frontend developer based in India.
+        Hey I&apos;m Aryan Shaily. A creative frontend developer based in India.
       </p>
       <div className="flex flex-col h-full justify-between gap-24">
         <div className="flex gap-4 lg:text-4xl text-2xl items-center">

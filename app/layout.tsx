@@ -31,8 +31,8 @@ export default function RootLayout({
           <div className="lg:col-span-1 col-span-2">
             <h3>Aryan Shaily</h3>
             <p className="lg:w-5/6">
-              I'm a 21yo Web developer/designer. Looking forward to solve your
-              problems with design and tech.
+              I&apos;m a 21yo Web developer/designer. Looking forward to solve
+              your problems with design and tech.
             </p>
           </div>
           <div>
