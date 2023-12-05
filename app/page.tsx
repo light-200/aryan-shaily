@@ -46,7 +46,7 @@ export default function Index() {
         <Space />
         <div className="row-start-3 col-span-2 w-full grid place-content-center lg:place-content-center p-2">
           <div className="flex lg:gap-4 gap-2 lg:text-4xl text-2xl items-center md:w-[600px] mb-16 justify-between whitespace-nowrap">
-            <span className="lg:pr-3 border-r-2 border-zinc-300 text-xl select-none">
+            <span className="lg:pr-3 border-r-2 border-zinc-300 text-xl select-none pr-2">
               Tech Stack
             </span>
             <FaReact />
@@ -59,7 +59,7 @@ export default function Index() {
         </div>
       </section>
       <section
-        className="min-h-screen w-full p-2 lg:p-6 flex flex-col relative"
+        className="min-h-[80vh] w-full p-2 lg:p-6 flex flex-col relative"
         id="about"
       >
         <div>
@@ -120,7 +120,7 @@ export default function Index() {
         </div>
       </section>
       <section
-        className="grid min-h-screen w-full p-2 lg:p-6 lg:grid-cols-3 grid-rows-[max-content_1fr] gap-4 place-items-center"
+        className="grid min-h-[80vh] w-full p-2 lg:p-6 lg:grid-cols-3 grid-rows-[max-content_1fr] gap-4 place-items-center"
         id="project"
       >
         <div className="lg:col-span-3 w-full h-full">
@@ -168,7 +168,7 @@ export default function Index() {
         </div>
       </section>
       <section
-        className="grid auto-rows-[min-content_1fr] gap-6  lg:grid-cols-[1fr_2fr] grid-cols-1 place-items-center min-h-screen w-full p-2 lg:p-6"
+        className="grid auto-rows-[min-content_1fr] gap-6  lg:grid-cols-[1fr_2fr] grid-cols-1 place-items-center min-h-[80vh] w-full p-2 lg:p-6"
         id="services"
       >
         <div className="lg:col-span-2 w-full">

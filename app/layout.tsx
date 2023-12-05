@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./globals.css";
 import { Share_Tech } from "next/font/google";
 const inter = Share_Tech({
@@ -27,7 +28,7 @@ export default function RootLayout({
         }
       >
         {children}
-        <footer className="grid lg:grid-cols-3 grid-cols-2 p-2 lg:p-6 border-[1px] border-transparent border-t-zinc-600 h-[400px] lg:justify-items-center">
+        <footer className="grid lg:grid-cols-3 grid-cols-2 p-2 lg:p-6 lg:pb-10 pb-4  border-[1px] border-transparent border-t-zinc-600 h-[100%] lg:justify-items-center">
           <div className="lg:col-span-1 col-span-2">
             <h3>Aryan Shaily</h3>
             <p className="lg:w-5/6">
@@ -38,19 +39,20 @@ export default function RootLayout({
           <div>
             <h3 className="font-semibold">Navigation Links</h3>
             <ul className="flex flex-col">
-              <li>About</li>
-              <li>Blog</li>
-              <li>Projects</li>
-              <li>Services</li>
+              <Link href={"#aboutt"}>About</Link>
+              <Link href={"/blog"}>Blog</Link>
+              <Link href={"#project"}>Projects</Link>
+              <Link href={"#services"}>Services</Link>
             </ul>
           </div>
           <div className="justify-self-end text-right">
             <h3 className="font-semibold">Contact Links</h3>
             <ul className="flex flex-col">
-              <li>Twitter</li>
-              <li>Linkedin</li>
-              <li>Mail</li>
-              <li>Send A Message</li>
+              <Link href={"https://www.linkedin.com/in/aryan-shaily/"}>
+                Linkedin
+              </Link>
+              <Link href={"mailto:aryanshaily123@gmail.com"}>Mail</Link>
+              <Link href={"#services"}>Send A Message</Link>
             </ul>
           </div>
         </footer>
