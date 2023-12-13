@@ -204,7 +204,7 @@ export default function Index() {
           </ul>
         </div>
 
-        <div className="lg:row-start-2 lg:col-start-2 lg:col-span-1 row-start-3 w-full lg:h-[90%] justify-self-center mb-40 lg:mb-0">
+        <div className="lg:row-start-2 lg:col-start-2 lg:col-span-1 row-start-3 w-full lg:h-[105%] justify-self-center mb-40 lg:mb-0">
           <ServicesForm selectedService={service} />
         </div>
       </section>
