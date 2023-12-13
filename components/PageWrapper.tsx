@@ -19,7 +19,7 @@ export default function PageWrapper({
     <>
       <motion.main
         className={
-          "grid grid-cols-3 lg:grid-rows-6 lg:grid-cols-5 min-h-screen p-4 lg:p-16 h-screen w-screen max-w-[1920px] xl:m-auto relative overflow-hidden " +
+          "grid grid-cols-3 lg:grid-rows-6 lg:grid-cols-5 min-h-screen p-4 lg:p-8 h-screen w-screen max-w-[1920px] xl:m-auto relative overflow-hidden " +
           className
         }
         initial={{ opacity: 0, y: 20 }}
@@ -30,21 +30,20 @@ export default function PageWrapper({
         }}
         exit={{ opacity: 0, y: 20 }}
       >
-        <GridAnim />
         <Image
           src={"/artifact01.svg"}
           alt="svg"
           width={150}
           height={150}
-          className="absolute -top-2 -left-1 lg:w-[440px] select-none"
+          className="absolute -top-2 -left-1 lg:w-[300px] select-none -z-10 opacity-80"
         />
         <Image
           src={"/artifact01.svg"}
           alt="svg"
           width={150}
           height={150}
-          className={`absolute -bottom-2 -right-2 lg:w-[440px] select-none scale-x-[-1] scale-y-[-1] 
-             ${PATH_FOR_BOTTOM_SVG.includes(location) ? "hidden" : ""}`}
+          className={`absolute -bottom-2 -right-1 lg:w-[300px] select-none scale-x-[-1] scale-y-[-1]  opacity-80
+             ${PATH_FOR_BOTTOM_SVG.includes(location) ? "hidden" : ""} -z-10`}
         />
         <Logo />
         {children}

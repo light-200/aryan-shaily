@@ -11,7 +11,6 @@ export default function Random() {
           <li>the 1975</li>
           <li>tnbhd</li>
           <li>current joys</li>
-          <li>justin beiber</li>
         </ul>
       </div>
       <div className="row-start-3 lg:row-start-2 col-start-3 xl:text-3xl lg:text-2xl uppercase whitespace-nowrap lg:mt-10 flex flex-col gap-2 lg:gap-4 mt-3">
