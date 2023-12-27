@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./globals.css";
 import { Inter, Libre_Barcode_128_Text } from "next/font/google";
 
