@@ -22,7 +22,7 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
     <form
       ref={form}
       method="post"
-      className="w-full h-max grid  lg:grid-rows-[min-content_min-content_1fr] grid-cols-1 lg:grid-cols-2 gap-4 gap-x-8 p-4 rounded-md bg-zinc-200 text-black max-w-4xl relative select-none border-zinc-400 border-2"
+      className="w-full h-max grid  lg:grid-rows-[min-content_min-content_1fr] grid-cols-1 lg:grid-cols-2 gap-4 gap-x-8 p-4 bg-cardBg0 rounded-[10px] text-black max-w-4xl relative select-none shadow"
       onSubmit={handleSubmit}
     >
       <fieldset className="flex flex-col gap-1">
@@ -36,7 +36,7 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
           onChange={(e) => {
             setUserName(e.target.value);
           }}
-          className="rounded-md p-2 bg-zinc-100 focus:outline-zinc-400"
+          className=" outline-none"
           placeholder="your name..."
         />
       </fieldset>
@@ -51,7 +51,7 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
           }}
           id="email"
           placeholder="your email..."
-          className="rounded-md p-2 bg-zinc-100 focus:outline-zinc-400"
+          className=" outline-none"
         />
       </div>
       <div className="flex flex-col gap-1">
@@ -62,7 +62,7 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
           id="project"
           value={selectedService}
           onChange={(e) => e.preventDefault()}
-          className="rounded-md p-2 bg-zinc-100 focus:outline-zinc-400"
+          className="outline-none"
           placeholder="what service do you want?"
         />
       </div>
@@ -80,13 +80,13 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
           rows={12}
           maxLength={2400}
           placeholder="Leave a message..."
-          className="w-full rounded-md p-4 bg-zinc-100 focus:outline-zinc-400 border-zinc-300 border-2"
+          className="w-full h-full p-4 bg-inputBg outline-none resize-none"
         ></textarea>
       </div>
       <input
         type="submit"
         value={state.succeeded ? "sent" : "send"}
-        className="bg-zinc-200 rounded-md p-1 px-2 shadow-sm active:bg-zinc-300 border-zinc-400 border-2 active:scale-95 absolute bottom-6 right-6 text-lg"
+        className="px-3 p-2 absolute bottom-0 right-0 mx-[1.3rem] my-6 rounded-[10px] bg-buttonBg h-min w-28 whitespace-nowrap shadow-md z-10"
       />
     </form>
   );

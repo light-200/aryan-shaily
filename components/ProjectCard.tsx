@@ -25,8 +25,8 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
   ProjectStack,
 }) => {
   return (
-    <div className="flex flex-col max-w-[340px] w-full h-[450px] bg-zinc-200 rounded-md border-zinc-500 gap-1 border-2 p-2 text-black items-center relative">
-      <h1 className="text-left w-full text-lg">{ProjectName}</h1>
+    <div className="flex flex-col max-w-[340px] w-full h-[471px] bg-cardBg1 rounded-md  gap-[14px] p-3 text-black items-center relative shadow text-xs">
+      <h1 className="text-left w-full text-sm">{ProjectName}</h1>
       <Image
         height={190}
         width={310}
@@ -34,7 +34,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
         alt={"Project Image"}
         className="bg-black w-full mb-4 rounded-sm"
       />
-      <p className="w-full mb-2">{ProjectDesc}</p>
+      <p className="w-full mb-2 leading-4">{ProjectDesc}</p>
       <div className="flex flex-wrap gap-2 w-full h-max pb-4 mb-2 overflow-clip">
         {ProjectStack.map((tech) => (
           <motion.span
@@ -47,7 +47,7 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
               },
             }}
             key={v4()}
-            className="p-1 px-3 rounded-full bg-[#D9D9D9] h-min w-min whitespace-nowrap shadow-md border-[#C0BFBF] border-2 select-text z-10 cursor-grab active:focus-within:cursor-grabbing"
+            className="px-3 p-1 grid place-items-center rounded-full bg-buttonBg h-[min] w-min whitespace-nowrap shadow-md border-buttonBorder border-2 select-text z-10 cursor-grab active:focus-within:cursor-grabbing"
           >
             {tech}
           </motion.span>

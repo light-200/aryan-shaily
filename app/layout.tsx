@@ -1,6 +1,13 @@
 import "./globals.css";
-import { Share_Tech } from "next/font/google";
-const inter = Share_Tech({
+import { Inter, Libre_Barcode_128_Text } from "next/font/google";
+
+const inter = Inter({
+  style: "normal",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const barcode = Libre_Barcode_128_Text({
   style: "normal",
   subsets: ["latin"],
   weight: "400",
@@ -23,35 +30,24 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " selection:text-white selection:bg-black overflow-x-hidden scroll-smooth bg-[#121212] text-white text-opacity-80 lg:p-0 p-2"
+          " selection:text-black selection:bg-documentBg overflow-x-hidden scroll-smooth lg:p-0 p-2 text-sm"
         }
       >
         {children}
-        <footer className="grid lg:grid-cols-3 grid-cols-2 p-2 lg:p-6 border-[1px] border-transparent border-t-zinc-600 h-[400px] lg:justify-items-center">
-          <div className="lg:col-span-1 col-span-2">
-            <h3>Aryan Shaily</h3>
-            <p className="lg:w-5/6">
-              I&apos;m a 21yo Web developer/designer. Looking forward to solve
-              your problems with design and tech.
-            </p>
+        <footer className="flex justify-between items-end p-2 lg:p-6 h-[200px]">
+          <div className="leading-snug">
+            <h3>
+              <i>Aryan-Shaily, </i> 2023
+            </h3>
+
+            <p className="">all rights reserved</p>
           </div>
-          <div>
-            <h3 className="font-semibold">Navigation Links</h3>
-            <ul className="flex flex-col">
-              <li>About</li>
-              <li>Blog</li>
-              <li>Projects</li>
-              <li>Services</li>
-            </ul>
-          </div>
-          <div className="justify-self-end text-right">
-            <h3 className="font-semibold">Contact Links</h3>
-            <ul className="flex flex-col">
-              <li>Twitter</li>
-              <li>Linkedin</li>
-              <li>Mail</li>
-              <li>Send A Message</li>
-            </ul>
+          <div
+            className={
+              barcode.className + " justify-self-end text-right text-[32px]"
+            }
+          >
+            <h3 className="font-medium">Hire me</h3>
           </div>
         </footer>
       </body>
