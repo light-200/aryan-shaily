@@ -34,7 +34,7 @@ export default function RootLayout({
         }
       >
         {children}
-        <footer className="flex justify-between items-end p-2 lg:p-6 h-[200px]">
+        <footer className="flex justify-between items-end p-2 lg:p-6 h-max lg:min-h-[200px]">
           <div className="leading-snug">
             <h3>
               <i>Aryan-Shaily, </i> 2023

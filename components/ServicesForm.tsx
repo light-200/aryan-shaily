@@ -22,7 +22,7 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
     <form
       ref={form}
       method="post"
-      className="w-full h-max grid  lg:grid-rows-[min-content_min-content_1fr] grid-cols-1 lg:grid-cols-2 gap-4 gap-x-8 p-4 bg-cardBg0 rounded-[10px] text-black max-w-4xl relative select-none shadow"
+      className="w-full h-full grid  lg:grid-rows-[min-content_min-content_1fr] grid-cols-1 lg:grid-cols-2 gap-4 gap-x-8 p-4 bg-cardBg0 rounded-[10px] text-black max-w-4xl relative select-none shadow"
       onSubmit={handleSubmit}
     >
       <fieldset className="flex flex-col gap-1">

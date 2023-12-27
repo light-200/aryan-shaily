@@ -1,4 +1,5 @@
 import { Libre_Barcode_128_Text } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import { FunctionComponent } from "react";
 import { BsGithub, BsLinkedin, BsSend } from "react-icons/bs";
@@ -13,7 +14,7 @@ const barcode = Libre_Barcode_128_Text({
 
 const Space: FunctionComponent<SpaceProps> = () => {
   return (
-    <div className="w-full h-[82vh] grid gap-4 place-content-center  col-span-2 p-2 lg:p-0">
+    <div className="w-full h-[82vh] grid gap-4 place-content-center relative top-10 lg:-left-20  col-span-2 p-2 lg:p-0">
       <p className="italic">
         Hey I'm Aryan, I make amazing websites
         <br />

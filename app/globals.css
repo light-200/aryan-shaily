@@ -18,6 +18,14 @@
     @apply bg-inputBg rounded-[10px] h-[49px] p-4;
   }
 
+  section {
+    overflow-y: hidden;
+  }
+
+  .bubble {
+    @apply hidden md:block;
+  }
+
   input::placeholder,
   textarea::placeholder {
     @apply text-gray-700 opacity-25;
@@ -32,6 +40,10 @@
 
 body::-webkit-scrollbar {
   width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background: none;
 }
 
 body::-webkit-scrollbar-thumb {
