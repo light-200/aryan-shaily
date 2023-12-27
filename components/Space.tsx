@@ -16,7 +16,7 @@ const Space: FunctionComponent<SpaceProps> = () => {
   return (
     <div className="w-full h-[82vh] grid gap-4 place-content-center relative top-10 lg:-left-20  col-span-2 p-2 lg:p-0">
       <p className="italic">
-        Hey I'm Aryan, I make amazing websites
+        Hey I&apos;m Aryan, I make amazing websites
         <br />
         using nextjs and tailwind.
       </p>
