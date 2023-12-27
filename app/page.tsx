@@ -12,13 +12,14 @@ import { SiTailwindcss } from "react-icons/si";
 import Image from "next/image";
 import { easeInOut, motion } from "framer-motion";
 import { Bubble } from "@/components/elements/bubble";
+import { ShuffleBtn } from "@/components/elements/shufflebtn";
 
 const floatVariant = {
   initial: {
-    y: 0,
+    y: -3,
   },
   animate: {
-    y: [0, 3, 0],
+    y: [-3, 3, -3],
     transition: {
       repeat: Infinity,
       duration: 3,
@@ -44,25 +45,24 @@ export default function Index() {
           </div>
           <div className="justify-self-end">
             <ul className="w-fit flex lg:gap-4">
-              <Link href="#about" className="btn-primary">
+              <ShuffleBtn href="#about" className={""} newTab={false}>
                 about
-              </Link>
-              <Link href="/blog" className="btn-primary">
+              </ShuffleBtn>
+              <ShuffleBtn href="/blog" className={""} newTab={false}>
                 blog
-              </Link>
-              <Link href="#project" className="btn-primary">
+              </ShuffleBtn>
+              <ShuffleBtn href="#project" className={""} newTab={false}>
                 project
-              </Link>
-              <Link href="#services" className="btn-primary">
+              </ShuffleBtn>
+              <ShuffleBtn href="#services" className={""} newTab={false}>
                 services
-              </Link>
+              </ShuffleBtn>
             </ul>
           </div>
         </div>
-        <Bubble
-          className="absolute bubble top-[50px] -right-[150px] lg:block md:hidden select-none opacity-40"
-          size={354}
-        />
+        <Bubble className="absolute bubble top-[50px] -right-[150px] lg:block md:hidden select-none opacity-40">
+          <Image src={"/bubbles.svg"} alt="asset-01" width={354} height={354} />
+        </Bubble>
         <div className="absolute w-fit">
           <motion.span
             variants={floatVariant}
@@ -77,24 +77,30 @@ export default function Index() {
               className="relative -top-14 left-10 select-none"
             />
           </motion.span>
-          <Bubble
-            size={204}
-            className="absolute bubble -bottom-[10%] -right-[55%] select-none opacity-90"
-          />
+          <Bubble className="absolute bubble -bottom-[10%] -right-[55%] select-none opacity-90">
+            <Image
+              src={"/bubbles.svg"}
+              alt="asset-01"
+              width={204}
+              height={204}
+            />
+          </Bubble>
         </div>
-        <Bubble
-          size={229}
-          className="absolute bottom-10 bubble -left-28 select-none"
-        />
-        <Bubble
-          size={61}
-          className="absolute top-[20%] bubble left-[15%] select-none opacity-60"
-        />
+        <Bubble className="absolute bottom-10 bubble -left-28 select-none">
+          <Image src={"/bubbles.svg"} alt="asset-01" width={229} height={229} />
+        </Bubble>
+        <Bubble className="absolute top-[20%] bubble left-[15%] select-none opacity-60">
+          <Image src={"/bubbles.svg"} alt="asset-01" width={61} height={61} />
+        </Bubble>
 
         <Space />
-        <div className="row-start-3 col-span-2 w-full grid place-content-center lg:place-content-center p-2">
+        <ShuffleBtn
+          className="row-start-3 col-span-2 w-fit grid place-content-center lg:place-content-center p-4"
+          href={""}
+          newTab={false}
+        >
           scroll
-        </div>
+        </ShuffleBtn>
       </section>
       <section
         className="min-h-screen w-full p-2 lg:p-6 flex flex-col place-content-center justify-center items-center relative overflow-hidden"

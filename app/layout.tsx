@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "./globals.css";
 import { Inter, Libre_Barcode_128_Text } from "next/font/google";
+import { ShuffleBtn } from "@/components/elements/shufflebtn";
 
 const inter = Inter({
   style: "normal",
@@ -48,7 +49,13 @@ export default function RootLayout({
               barcode.className + " justify-self-end text-right text-[32px]"
             }
           >
-            <h3 className="font-medium">Hire me</h3>
+            <ShuffleBtn
+              className="font-medium"
+              href={"https://www.linkedin.com/in/aryan-shaily"}
+              newTab={true}
+            >
+              lets connect
+            </ShuffleBtn>
           </div>
         </footer>
       </body>

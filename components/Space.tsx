@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FunctionComponent } from "react";
 import { BsGithub, BsLinkedin, BsSend } from "react-icons/bs";
+import { ShuffleBtn } from "./elements/shufflebtn";
 
 interface SpaceProps {}
 
@@ -20,7 +21,13 @@ const Space: FunctionComponent<SpaceProps> = () => {
         <br />
         using nextjs and tailwind.
       </p>
-      <span className={barcode.className + " text-[32px]"}>Hire me</span>
+      <ShuffleBtn
+        className={barcode.className + " text-[32px]"}
+        href={"#services"}
+        newTab={false}
+      >
+        lets talk
+      </ShuffleBtn>
     </div>
   );
 };

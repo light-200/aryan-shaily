@@ -1,19 +1,21 @@
 import { easeInOut, motion } from "framer-motion";
 import Image from "next/image";
+import React from "react";
 
 export function Bubble({
   className,
-  size,
+  children,
 }: {
   className: string;
-  size: number;
+  children: React.ReactNode;
 }) {
   const floatVariant = {
     initial: {
-      y: 0,
+      y: -8,
     },
     animate: {
-      y: [0, 3 + (Math.floor(Math.random() * 7) % 7), 0],
+      y: [-8, 5 + (Math.floor(Math.random() * 8) % 8), -8],
+
       transition: {
         repeat: Infinity,
         duration: 3 + (Math.floor(Math.random() * 5) % 5),
@@ -29,7 +31,7 @@ export function Bubble({
       animate={"animate"}
       className={className}
     >
-      <Image src={"/bubbles.svg"} alt="asset-01" width={size} height={size} />
+      {children}
     </motion.span>
   );
 }
