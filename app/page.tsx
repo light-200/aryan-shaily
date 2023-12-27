@@ -4,21 +4,36 @@ import ProjectCard from "@/components/ProjectCard";
 import ServicesForm from "@/components/ServicesForm";
 import Space from "@/components/Space";
 import Link from "next/link";
-import { SyntheticEvent, useState } from "react";
+import { SyntheticEvent, useEffect, useRef, useState } from "react";
 import { BsGithub, BsLinkedin, BsGit } from "react-icons/bs";
 import { FaReact, FaFigma } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiTailwindcss } from "react-icons/si";
 import Image from "next/image";
+import { easeInOut, motion } from "framer-motion";
+import { Bubble } from "@/components/elements/bubble";
+
+const floatVariant = {
+  initial: {
+    y: 0,
+  },
+  animate: {
+    y: [0, 3, 0],
+    transition: {
+      repeat: Infinity,
+      duration: 3,
+      ease: easeInOut,
+    },
+  },
+};
 
 export default function Index() {
   const [service, setService] = useState("");
+  const circleRef = useRef<HTMLDivElement>(null);
 
   const handleServiceSelection = (e: SyntheticEvent) => {
     setService(e.currentTarget.innerHTML);
   };
-
-  const triggerAnimation = () => {};
 
   return (
     <main className="w-full overflow-x-hidden">
@@ -44,41 +59,35 @@ export default function Index() {
             </ul>
           </div>
         </div>
-        <Image
-          src={"/bubbles.svg"}
-          alt="asset-01"
-          width={354}
-          height={354}
+        <Bubble
           className="absolute bubble top-[50px] -right-[150px] lg:block md:hidden select-none opacity-40"
+          size={354}
         />
         <div className="absolute w-fit">
-          <Image
-            src={"/clockwize.png"}
-            alt="asset-01"
-            width={473.62}
-            height={476.01}
-            className="relative -top-14 left-10 select-none"
-          />
-          <Image
-            src={"/bubbles.svg"}
-            alt="asset-01"
-            width={204}
-            height={204}
+          <motion.span
+            variants={floatVariant}
+            initial={"initial"}
+            animate={"animate"}
+          >
+            <Image
+              src={"/clockwize.png"}
+              alt="asset-01"
+              width={473.62}
+              height={476.01}
+              className="relative -top-14 left-10 select-none"
+            />
+          </motion.span>
+          <Bubble
+            size={204}
             className="absolute bubble -bottom-[10%] -right-[55%] select-none opacity-90"
           />
         </div>
-        <Image
-          src={"/bubbles.svg"}
-          alt="asset-01"
-          width={229}
-          height={229}
+        <Bubble
+          size={229}
           className="absolute bottom-10 bubble -left-28 select-none"
         />
-        <Image
-          src={"/bubbles.svg"}
-          alt="asset-01"
-          width={61}
-          height={61}
+        <Bubble
+          size={61}
           className="absolute top-[20%] bubble left-[15%] select-none opacity-60"
         />
 
