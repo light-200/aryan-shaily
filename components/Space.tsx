@@ -1,9 +1,11 @@
+"use client";
 import { Libre_Barcode_128_Text } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect } from "react";
 import { BsGithub, BsLinkedin, BsSend } from "react-icons/bs";
 import { ShuffleBtn } from "./elements/shufflebtn";
+import { motion } from "framer-motion";
 
 interface SpaceProps {}
 
@@ -15,19 +17,31 @@ const barcode = Libre_Barcode_128_Text({
 
 const Space: FunctionComponent<SpaceProps> = () => {
   return (
-    <div className="w-full h-[82vh] grid gap-4 place-content-center relative top-10 lg:-left-20  col-span-2 p-2 lg:p-0">
-      <p className="italic">
-        Hey I&apos;m Aryan, I make amazing websites
-        <br />
-        using nextjs and tailwind.
-      </p>
-      <ShuffleBtn
-        className={barcode.className + " text-[32px]"}
-        href={"#services"}
-        newTab={false}
+    <div className="w-full h-[82vh] grid gap-4 place-content-center relative  col-span-2 p-2 lg:p-0">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{
+          opacity: [0, 1],
+          y: 0,
+          transition: {
+            duration: 0.2,
+          },
+        }}
+        className="backdrop-blur-md aspect-square w-fit grid content-center auto-rows-min gap-6 justify-around p-6 shadow"
       >
-        lets talk
-      </ShuffleBtn>
+        <p className="italic">
+          Hey I&apos;m Aryan, I make amazing websites
+          <br />
+          using nextjs and tailwind.
+        </p>
+        <ShuffleBtn
+          className={barcode.className + " text-[32px] h-fit"}
+          href={"#services"}
+          newTab={false}
+        >
+          lets talk
+        </ShuffleBtn>
+      </motion.div>
     </div>
   );
 };

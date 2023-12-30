@@ -1,5 +1,4 @@
 import { easeInOut, motion } from "framer-motion";
-import Image from "next/image";
 import React from "react";
 
 export function Bubble({

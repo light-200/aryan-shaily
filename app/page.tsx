@@ -10,19 +10,19 @@ import { FaReact, FaFigma } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiTailwindcss } from "react-icons/si";
 import Image from "next/image";
-import { easeInOut, motion } from "framer-motion";
+import { easeInOut, motion, useScroll, useTransform } from "framer-motion";
 import { Bubble } from "@/components/elements/bubble";
 import { ShuffleBtn } from "@/components/elements/shufflebtn";
 
 const floatVariant = {
   initial: {
-    y: -3,
+    y: -4,
   },
   animate: {
-    y: [-3, 3, -3],
+    y: [-4, 4, -4],
     transition: {
       repeat: Infinity,
-      duration: 3,
+      duration: 4,
       ease: easeInOut,
     },
   },
@@ -30,6 +30,7 @@ const floatVariant = {
 
 export default function Index() {
   const [service, setService] = useState("");
+  const landing = useRef(null);
   const circleRef = useRef<HTMLDivElement>(null);
 
   const handleServiceSelection = (e: SyntheticEvent) => {
@@ -38,7 +39,10 @@ export default function Index() {
 
   return (
     <main className="w-full overflow-x-hidden">
-      <section className="grid max-h-screen h-screen min-w-screen w-full grid-cols-2 grid-rows-[min-content_1fr_1fr] place-items-center relative items-center overflow-hidden">
+      <section
+        ref={landing}
+        className="grid max-h-screen h-screen min-w-screen w-full grid-cols-2 grid-rows-[min-content_1fr_1fr] place-items-center relative items-center overflow-hidden"
+      >
         <div className="col-span-2 flex justify-between items-baseline lg:px-8 p-4 w-full">
           <div>
             <span className="">Aryan</span>
@@ -68,6 +72,7 @@ export default function Index() {
             variants={floatVariant}
             initial={"initial"}
             animate={"animate"}
+            className="w-fit block"
           >
             <Image
               src={"/clockwize.png"}
