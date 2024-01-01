@@ -49,7 +49,7 @@ const Space: FunctionComponent<SpaceProps> = () => {
           href={"#services"}
           newTab={false}
         >
-          lets talk
+          lets connect
         </ShuffleBtn>
       </motion.div>
     </div>

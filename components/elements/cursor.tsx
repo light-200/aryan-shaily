@@ -11,7 +11,7 @@ import { RefObject, useEffect, useRef, useState } from "react";
 export function Cursor({
   targetBtn,
 }: {
-  targetBtn: RefObject<HTMLDivElement>;
+  targetBtn: RefObject<HTMLAnchorElement>;
 }) {
   const scope = useRef(null);
   const [isHover, setIsHover] = useState(false);
@@ -28,7 +28,7 @@ export function Cursor({
   };
 
   //Smooth out the mouse values
-  const smoothOptions = { damping: 20, stiffness: 200, mass: 0.5 };
+  const smoothOptions = { damping: 20, stiffness: 250, mass: 0.5 };
   const smoothMouse = {
     x: useSpring(mouse.x, smoothOptions),
     y: useSpring(mouse.y, smoothOptions),
@@ -73,6 +73,7 @@ export function Cursor({
   };
 
   useEffect(() => {
+    console.log(targetBtn.current);
     targetBtn?.current?.addEventListener("mouseenter", manageMouseOver);
     targetBtn?.current?.addEventListener("mouseleave", manageMouseLeave);
     // window.addEventListener("mousedown", () => manageMouseDown());
