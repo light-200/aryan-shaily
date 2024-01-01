@@ -1,8 +1,9 @@
-import Link from "next/link";
+"use client";
 import "./globals.css";
 import { Inter, Libre_Barcode_128_Text } from "next/font/google";
 import { ShuffleBtn } from "@/components/elements/shufflebtn";
 import { Cursor } from "@/components/elements/cursor";
+import { useRef } from "react";
 
 const inter = Inter({
   style: "normal",
@@ -28,6 +29,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const ref = useRef(null);
   return (
     <html lang="en">
       <body
@@ -51,6 +53,7 @@ export default function RootLayout({
             }
           >
             <ShuffleBtn
+              ref={ref}
               className="font-medium"
               href={"https://www.linkedin.com/in/aryan-shaily"}
               newTab={true}
@@ -59,7 +62,7 @@ export default function RootLayout({
             </ShuffleBtn>
           </div>
         </footer>
-        <Cursor />
+        <Cursor targetBtn={ref} />
       </body>
     </html>
   );

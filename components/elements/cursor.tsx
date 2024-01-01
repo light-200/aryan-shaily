@@ -1,9 +1,20 @@
 "use client";
-import { motion, useAnimate, useMotionValue, useSpring } from "framer-motion";
-import { useEffect } from "react";
+import {
+  motion,
+  animate,
+  useAnimate,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
+import { RefObject, useEffect, useRef, useState } from "react";
 
-export function Cursor() {
-  const [scope, animate] = useAnimate();
+export function Cursor({
+  targetBtn,
+}: {
+  targetBtn: RefObject<HTMLDivElement>;
+}) {
+  const scope = useRef(null);
+  const [isHover, setIsHover] = useState(false);
 
   const cursorSize = 20;
   const mouse = {
@@ -17,7 +28,7 @@ export function Cursor() {
   };
 
   //Smooth out the mouse values
-  const smoothOptions = { damping: 20, stiffness: 300, mass: 0.5 };
+  const smoothOptions = { damping: 20, stiffness: 200, mass: 0.5 };
   const smoothMouse = {
     x: useSpring(mouse.x, smoothOptions),
     y: useSpring(mouse.y, smoothOptions),
@@ -26,37 +37,55 @@ export function Cursor() {
   const manageMouseMove = (e: MouseEvent) => {
     const { pageX, pageY } = e;
 
-    //move custom cursor to center of stickyElement
-    mouse.x.set(pageX - cursorSize / 2);
-    mouse.y.set(pageY - cursorSize / 2);
+    if (isHover) {
+      const { left, top, height, width } =
+        targetBtn.current!!.getBoundingClientRect();
+
+      //center position of the stickyElement
+      const center = { x: left + width / 2, y: top + scrollY + height / 2 };
+      const distance = { x: pageX - center.x, y: pageY - center.y };
+
+      scale.x.set(2);
+      scale.y.set(2);
+
+      mouse.x.set(center.x - cursorSize / 2 + distance.x * 0.1);
+      mouse.y.set(center.y - cursorSize / 2 + distance.y * 0.1);
+    } else {
+      //move custom cursor to center of stickyElement
+      mouse.x.set(pageX - cursorSize / 2);
+      mouse.y.set(pageY - cursorSize / 2);
+    }
   };
 
-  const manageMouseDown = () => {
-    animate(
-      scope?.current,
-      { scaleX: 2, scaleY: 2 },
-      { duration: 0.1, type: "spring" }
-    );
+  const manageMouseOver = (e: MouseEvent) => {
+    setIsHover(true);
   };
 
-  const manageMouseUp = () => {
+  const manageMouseLeave = (e: MouseEvent) => {
+    setIsHover(false);
+    console.log("mouse left!!", isHover);
+
     animate(
-      scope?.current,
+      scope.current,
       { scaleX: 1, scaleY: 1 },
       { duration: 0.1, type: "spring" }
     );
   };
 
   useEffect(() => {
-    window.addEventListener("mousedown", () => manageMouseDown());
-    window.addEventListener("mouseup", () => manageMouseUp());
+    targetBtn?.current?.addEventListener("mouseenter", manageMouseOver);
+    targetBtn?.current?.addEventListener("mouseleave", manageMouseLeave);
+    // window.addEventListener("mousedown", () => manageMouseDown());
+    // window.addEventListener("mouseup", () => manageMouseUp());
     window.addEventListener("mousemove", manageMouseMove);
     return () => {
-      window.removeEventListener("mousedown", () => manageMouseDown());
-      window.removeEventListener("mouseup", () => manageMouseUp());
+      targetBtn?.current?.removeEventListener("mouseenter", manageMouseOver);
+      targetBtn?.current?.removeEventListener("mouseleave", manageMouseLeave);
+      // window.removeEventListener("mousedown", () => manageMouseDown());
+      // window.removeEventListener("mouseup", () => manageMouseUp());
       window.removeEventListener("mousemove", manageMouseMove);
     };
-  }, []);
+  }, [isHover]);
 
   return (
     <motion.div
@@ -69,6 +98,13 @@ export function Cursor() {
       animate={{
         width: cursorSize,
         height: cursorSize,
+      }}
+      transition={{
+        type: "spring",
+        duration: 0.1,
+        damping: 20,
+        stiffness: 300,
+        mass: 0.5,
       }}
       className={`mix-blend-difference bg-documentBg pointer-events-none rounded-full absolute z-50`}
       id="cursor"
