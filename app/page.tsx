@@ -65,7 +65,13 @@ export default function Index() {
           </div>
         </div>
         <Bubble className="absolute bubble top-[50px] -right-[150px] lg:block md:hidden select-none opacity-40">
-          <Image src={"/bubbles.svg"} alt="asset-01" width={354} height={354} />
+          <Image
+            priority
+            src={"/bubbles.svg"}
+            alt="asset-01"
+            width={354}
+            height={354}
+          />
         </Bubble>
         <div className="absolute w-fit">
           <motion.span
@@ -77,6 +83,7 @@ export default function Index() {
             <Image
               src={"/clockwize.png"}
               alt="asset-01"
+              priority
               width={473.62}
               height={476.01}
               className="relative -top-14 left-10 select-none"
@@ -84,6 +91,7 @@ export default function Index() {
           </motion.span>
           <Bubble className="absolute bubble -bottom-[10%] -right-[55%] select-none opacity-90">
             <Image
+              priority
               src={"/bubbles.svg"}
               alt="asset-01"
               width={204}
@@ -92,10 +100,22 @@ export default function Index() {
           </Bubble>
         </div>
         <Bubble className="absolute bottom-10 bubble -left-28 select-none">
-          <Image src={"/bubbles.svg"} alt="asset-01" width={229} height={229} />
+          <Image
+            priority
+            src={"/bubbles.svg"}
+            alt="asset-01"
+            width={229}
+            height={229}
+          />
         </Bubble>
         <Bubble className="absolute top-[20%] bubble left-[15%] select-none opacity-60">
-          <Image src={"/bubbles.svg"} alt="asset-01" width={61} height={61} />
+          <Image
+            priority
+            src={"/bubbles.svg"}
+            alt="asset-01"
+            width={61}
+            height={61}
+          />
         </Bubble>
 
         <Space />
@@ -109,6 +129,7 @@ export default function Index() {
         </div>
         <div className="absolute max-w-screen h-fit overflow-hidden inline-flex justify-center">
           <Image
+            priority
             src={"/waves.svg"}
             alt="asset-01"
             width={1255}
@@ -179,6 +200,7 @@ export default function Index() {
         </div>
         <div className="absolute w-screen overflow-hidden inline-flex justify-center">
           <Image
+            priority
             src={"/line.svg"}
             alt="asset-01"
             width={1519}
@@ -236,6 +258,7 @@ export default function Index() {
         </div>
         <div className="absolute w-screen overflow-hidden inline-flex justify-center">
           <Image
+            priority
             src={"/stripe.svg"}
             alt="asset-01"
             width={1519}
