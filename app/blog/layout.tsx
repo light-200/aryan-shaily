@@ -1,30 +1,30 @@
-import Link from "next/link";
+import { Inter, Libre_Barcode_128_Text } from "next/font/google";
+import { ShuffleBtn } from "@/components/elements/shufflebtn";
+import { Cursor } from "@/components/elements/cursor";
 
-export default function layout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <div className="col-span-2 flex justify-between items-baseline lg:px-8 p-2">
-        <div>
-          <span className="lg:text-2xl text-xl">Aryan</span>
-        </div>
-        <div className="justify-self-end">
-          <ul className="w-fit flex lg:gap-4">
-            <Link href="#about" className="btn-primary">
-              About
-            </Link>
-            <Link href="/blog" className="btn-primary">
-              Blog
-            </Link>
-            <Link href="#project" className="btn-primary">
-              Project
-            </Link>
-            <Link href="#services" className="btn-primary">
-              Services
-            </Link>
-          </ul>
-        </div>
-      </div>
-      {children}
-    </>
-  );
+const inter = Inter({
+  style: "normal",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const barcode = Libre_Barcode_128_Text({
+  style: "normal",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+export const metadata = {
+  title: "Aryan",
+  description: "Web development and design portfolio of Aryan Shaily.",
+  themeColor: "white",
+  creator: "Aryan Shaily",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
 }

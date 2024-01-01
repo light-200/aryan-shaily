@@ -2,6 +2,7 @@ import Link from "next/link";
 import "./globals.css";
 import { Inter, Libre_Barcode_128_Text } from "next/font/google";
 import { ShuffleBtn } from "@/components/elements/shufflebtn";
+import { Cursor } from "@/components/elements/cursor";
 
 const inter = Inter({
   style: "normal",
@@ -58,6 +59,7 @@ export default function RootLayout({
             </ShuffleBtn>
           </div>
         </footer>
+        <Cursor />
       </body>
     </html>
   );

@@ -24,13 +24,15 @@ export function Bubble({
   };
 
   return (
-    <motion.span
-      variants={floatVariant}
-      initial={"initial"}
-      animate={"animate"}
-      className={className}
-    >
-      {children}
-    </motion.span>
+    <div className={className}>
+      <motion.span
+        variants={floatVariant}
+        initial={"initial"}
+        animate={"animate"}
+        className="block"
+      >
+        {children}
+      </motion.span>
+    </div>
   );
 }

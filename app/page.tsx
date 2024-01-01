@@ -45,22 +45,22 @@ export default function Index() {
       >
         <div className="col-span-2 flex justify-between items-baseline lg:px-8 p-4 w-full">
           <div>
-            <span className="">Aryan</span>
+            <span className="text-xl">Aryan</span>
           </div>
           <div className="justify-self-end">
             <ul className="w-fit flex lg:gap-4">
-              <ShuffleBtn href="#about" className={""} newTab={false}>
-                about
-              </ShuffleBtn>
-              <ShuffleBtn href="/blog" className={""} newTab={false}>
-                blog
-              </ShuffleBtn>
-              <ShuffleBtn href="#project" className={""} newTab={false}>
-                project
-              </ShuffleBtn>
-              <ShuffleBtn href="#services" className={""} newTab={false}>
-                services
-              </ShuffleBtn>
+              <a href="#about" className="btn-primary">
+                About
+              </a>
+              <a href="/blog" className="btn-primary">
+                Blog
+              </a>
+              <a href="#project" className="btn-primary">
+                Project
+              </a>
+              <a href="#services" className="btn-primary">
+                Services
+              </a>
             </ul>
           </div>
         </div>
@@ -99,13 +99,6 @@ export default function Index() {
         </Bubble>
 
         <Space />
-        <ShuffleBtn
-          className="row-start-3 col-span-2 w-fit grid place-content-center lg:place-content-center p-4"
-          href={""}
-          newTab={false}
-        >
-          scroll
-        </ShuffleBtn>
       </section>
       <section
         className="min-h-screen w-full p-2 lg:p-6 flex flex-col place-content-center justify-center items-center relative overflow-hidden"

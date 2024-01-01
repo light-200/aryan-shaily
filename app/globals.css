@@ -8,7 +8,7 @@
   }
 
   .btn-primary {
-    @apply px-1 cursor-pointer hover:opacity-95 active:scale-95 origin-left select-none;
+    @apply px-1 cursor-pointer hover:opacity-95 active:scale-95 origin-left select-none z-50;
   }
   h1 {
     @apply pb-1;

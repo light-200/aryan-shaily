@@ -1,11 +1,8 @@
 "use client";
 import { Libre_Barcode_128_Text } from "next/font/google";
-import Image from "next/image";
-import Link from "next/link";
-import { FunctionComponent, useEffect } from "react";
-import { BsGithub, BsLinkedin, BsSend } from "react-icons/bs";
+import { FunctionComponent, useRef } from "react";
 import { ShuffleBtn } from "./elements/shufflebtn";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 interface SpaceProps {}
 
@@ -16,8 +13,18 @@ const barcode = Libre_Barcode_128_Text({
 });
 
 const Space: FunctionComponent<SpaceProps> = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [0, 500]);
+
   return (
-    <div className="w-full h-[82vh] grid gap-4 place-content-center relative  col-span-2 p-2 lg:p-0">
+    <div
+      ref={ref}
+      className="w-full h-[82vh] grid gap-4 place-content-center relative  col-span-2 p-2 lg:p-0"
+    >
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{
@@ -27,7 +34,10 @@ const Space: FunctionComponent<SpaceProps> = () => {
             duration: 0.2,
           },
         }}
-        className="backdrop-blur-md aspect-square w-fit grid content-center auto-rows-min gap-6 justify-around p-6 shadow"
+        className="backdrop-blur-md relative aspect-square w-fit min-w-fit grid content-center auto-rows-min gap-6 justify-around lg:p-6 p-2 shadow"
+        style={{
+          bottom: y,
+        }}
       >
         <p className="italic">
           Hey I&apos;m Aryan, I make amazing websites
@@ -35,7 +45,7 @@ const Space: FunctionComponent<SpaceProps> = () => {
           using nextjs and tailwind.
         </p>
         <ShuffleBtn
-          className={barcode.className + " text-[32px] h-fit"}
+          className={barcode.className + " text-[32px] h-fit z-50"}
           href={"#services"}
           newTab={false}
         >
