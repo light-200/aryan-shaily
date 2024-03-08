@@ -158,7 +158,7 @@ export default function Index() {
             ProjectStack={["javascript", "css", "firebase", "socket.io"]}
             ProjectLinks={{
               github: "https://github.com/light-200/type-master",
-              live: "https://light-200.github.io/type-master/",
+              live: "https://type-master.org",
             }}
           />
           <ProjectCard
