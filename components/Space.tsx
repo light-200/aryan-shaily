@@ -34,7 +34,7 @@ const Space: FunctionComponent<SpaceProps> = () => {
             duration: 0.1,
           },
         }}
-        className="backdrop-blur-md relative aspect-square w-fit min-w-fit grid content-center auto-rows-min gap-6 justify-around lg:p-6 p-2 shadow"
+        className="relative aspect-square w-fit min-w-fit grid content-center auto-rows-min gap-6 justify-around lg:p-6 p-2"
         style={{
           bottom: y,
         }}
