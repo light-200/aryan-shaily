@@ -1,8 +1,8 @@
 import { Footer } from "@/components/footer";
 import "./globals.css";
-import { Inter, Libre_Barcode_128_Text } from "next/font/google";
+import { DM_Sans, Libre_Barcode_128_Text } from "next/font/google";
 
-const inter = Inter({
+const dm_sans = DM_Sans({
   style: "normal",
   subsets: ["latin"],
   weight: "400",
@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={
-          inter.className +
+          dm_sans.className +
           " selection:text-black selection:bg-documentBg overflow-x-hidden scroll-smooth lg:p-0 p-2 text-sm"
         }
       >

@@ -8,6 +8,7 @@ import { easeInOut, motion } from "framer-motion";
 import { Bubble } from "@/components/elements/bubble";
 import { ShuffleBtn } from "@/components/elements/shufflebtn";
 import { AboutSection } from "@/components/aboutSection";
+import Scene from "@/components/Spline";
 
 const floatVariant = {
   initial: {
@@ -36,7 +37,7 @@ export default function Index() {
     <main className="w-full overflow-x-hidden">
       <section
         ref={landing}
-        className="grid max-h-screen h-screen min-w-screen w-full grid-cols-2 grid-rows-[min-content_1fr_1fr] place-items-center relative items-center overflow-hidden"
+        className="grid max-h-screen h-screen min-w-screen w-full grid-cols-2 grid-rows-[min-content_1fr_1fr] z-0 place-items-center relative items-center overflow-hidden"
       >
         <div className="col-span-2 flex justify-between items-baseline lg:px-8 p-4 w-full">
           <div>
@@ -59,7 +60,7 @@ export default function Index() {
             </ul>
           </div>
         </div>
-        <Bubble className="absolute bubble top-[50px] -right-[150px] lg:block md:hidden select-none opacity-40">
+        {/* <Bubble className="absolute bubble top-[50px] -right-[150px] lg:block md:hidden select-none opacity-40">
           <Image
             priority
             src={"/bubbles.svg"}
@@ -111,9 +112,10 @@ export default function Index() {
             width={61}
             height={61}
           />
-        </Bubble>
+        </Bubble> */}
 
         <Space />
+        <Scene />
       </section>
       <AboutSection />
       <section

@@ -23,7 +23,7 @@ const Space: FunctionComponent<SpaceProps> = () => {
   return (
     <div
       ref={ref}
-      className="w-full h-[82vh] grid gap-4 place-content-center relative  col-span-2 p-2 lg:p-0"
+      className="w-full h-[82vh] grid gap-4 place-content-center relative  col-span-2 p-2 lg:p-0 pointer-events-none"
     >
       <motion.div
         initial={{ opacity: 0, y: 10 }}
@@ -34,7 +34,7 @@ const Space: FunctionComponent<SpaceProps> = () => {
             duration: 0.1,
           },
         }}
-        className="relative aspect-square w-fit min-w-fit grid content-center auto-rows-min gap-6 justify-around lg:p-6 p-2"
+        className="relative w-fit min-w-fit grid content-center auto-rows-min gap-6 justify-around lg:p-6 p-2 backdrop-blur"
         style={{
           bottom: y,
         }}
@@ -45,7 +45,10 @@ const Space: FunctionComponent<SpaceProps> = () => {
           using nextjs and tailwind.
         </p>
         <ShuffleBtn
-          className={barcode.className + " text-[32px] h-fit z-50"}
+          className={
+            barcode.className +
+            " text-[32px] h-fit z-50 pointer-events-auto cursor-default text-blue-900"
+          }
           href={"#services"}
           newTab={false}
         >
