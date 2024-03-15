@@ -48,7 +48,7 @@ export function AboutSection() {
           alt="asset-01"
           width={1255}
           height={346}
-          className="relative select-none w-screen min-h-[346px] min-w-[1255px] top-40"
+          className="relative select-none w-screen min-h-[346px] min-w-[1255px] top-40 pointer-events-none"
         />
       </div>
       <div className="flex justify-center items-center h-[100%] flex-grow">

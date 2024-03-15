@@ -25,15 +25,17 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({
   ProjectStack,
 }) => {
   return (
-    <div className="flex flex-col max-w-[340px] w-full h-[471px] bg-cardBg1 rounded-md  gap-[14px] p-3 text-black items-center relative shadow text-xs">
+    <div className="group flex flex-col max-w-[340px] w-full h-[471px] bg-cardBg1 rounded-md  gap-[14px] p-3 text-black items-center relative shadow text-xs overflow-hidden">
       <h1 className="text-left w-full text-sm">{ProjectName}</h1>
-      <Image
-        height={190}
-        width={310}
-        src={ProjectImage}
-        alt={"Project Image"}
-        className="bg-black w-full mb-4 rounded-sm"
-      />
+      <div className="overflow-hidden bg-violet-300 mb-4 select-none">
+        <Image
+          height={190}
+          width={310}
+          src={ProjectImage}
+          alt={"Project Image"}
+          className="bg-black w-full pointer-events-none rounded-sm group-hover:scale-110 transition-all duration-500 ease-in-out transform-gpu origin-top-left"
+        />
+      </div>
       <p className="w-full mb-2 leading-4">{ProjectDesc}</p>
       <div className="flex flex-wrap gap-2 w-full h-max pb-4 mb-2 overflow-clip">
         {ProjectStack.map((tech) => (

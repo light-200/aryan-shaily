@@ -31,7 +31,7 @@ const Space: FunctionComponent<SpaceProps> = () => {
           opacity: [0, 1],
           y: 0,
           transition: {
-            duration: 0.1,
+            duration: 0.6,
           },
         }}
         className="relative aspect-square w-fit min-w-fit grid content-center auto-rows-min gap-6 justify-around lg:p-6 p-2"

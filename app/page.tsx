@@ -130,7 +130,7 @@ export default function Index() {
             alt="asset-01"
             width={1519}
             height={12}
-            className="relative select-none w-full min-w-[1910px]"
+            className="relative select-none w-full min-w-[1910px] pointer-events-none"
           />
         </div>
         <div className="lg:col-span-3 w-full flex flex-col lg:flex-row lg:gap-16 gap-4 my-40 lg:my-0 justify-center place-items-center">
@@ -175,20 +175,20 @@ export default function Index() {
         </div>
       </section>
       <section
-        className="grid auto-rows-[min-content_1fr] gap-6  lg:grid-cols-[1fr_2fr] grid-cols-1 place-items-center min-h-screen w-full p-2 lg:p-6 text-sm overflow-hidden"
+        className="grid auto-rows-[min-content_1fr] gap-6  lg:grid-cols-[1fr_2fr] grid-cols-1 place-items-center min-h-screen w-full p-2 lg:p-6 text-sm overflow-hidden select-text"
         id="services"
       >
         <div className="lg:col-span-2 w-full">
           <span>Services</span>
         </div>
-        <div className="absolute w-screen overflow-hidden inline-flex justify-center">
+        <div className="absolute w-screen overflow-hidden inline-flex justify-center select-none">
           <Image
             priority
             src={"/stripe.svg"}
             alt="asset-01"
             width={1519}
             height={120}
-            className="relative select-none w-full min-w-[1910px]"
+            className="relative select-none w-full min-w-[1910px] pointer-events-none"
           />
         </div>
         <div className="row-start-2 lg:w-60 w-full justify-self-end relative mt-40 lg:mt-0 lg:left-4">

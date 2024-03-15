@@ -72,19 +72,41 @@ export function Cursor({
     );
   };
 
+  const manageMouseDown = (e: MouseEvent) => {
+    animate(
+      scope.current,
+      { scaleX: 2, scaleY: 2 },
+      { duration: 0.05, ease: "easeIn" }
+    );
+    scale.x.set(2);
+    scale.y.set(2);
+  };
+
+  const manageMouseUp = (e: MouseEvent) => {
+    animate(
+      scope.current,
+      { scaleX: 1, scaleY: 1 },
+      { duration: 0.2, ease: "easeOut" }
+    );
+    scale.x.set(1);
+    scale.y.set(1);
+  };
+
   useEffect(() => {
     console.log(targetBtn.current);
     targetBtn?.current?.addEventListener("mouseenter", manageMouseOver);
     targetBtn?.current?.addEventListener("mouseleave", manageMouseLeave);
-    // window.addEventListener("mousedown", () => manageMouseDown());
-    // window.addEventListener("mouseup", () => manageMouseUp());
+    window.addEventListener("mousedown", manageMouseDown);
+    window.addEventListener("mouseup", manageMouseUp);
     window.addEventListener("mousemove", manageMouseMove);
+    window.addEventListener("dragend", manageMouseUp);
     return () => {
       targetBtn?.current?.removeEventListener("mouseenter", manageMouseOver);
       targetBtn?.current?.removeEventListener("mouseleave", manageMouseLeave);
-      // window.removeEventListener("mousedown", () => manageMouseDown());
-      // window.removeEventListener("mouseup", () => manageMouseUp());
+      window.removeEventListener("mousedown", manageMouseDown);
+      window.removeEventListener("mouseup", manageMouseUp);
       window.removeEventListener("mousemove", manageMouseMove);
+      window.removeEventListener("dragend", manageMouseUp);
     };
   }, [isHover]);
 

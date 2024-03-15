@@ -25,7 +25,7 @@ export default function RootLayout({
       <body
         className={
           dm_sans.className +
-          " selection:text-black selection:bg-documentBg overflow-x-hidden scroll-smooth lg:p-0 p-2 text-sm"
+          " selection:text-black selection:bg-documentBg overflow-x-hidden scroll-smooth lg:p-0 p-2 text-sm h-screen"
         }
       >
         {children}
