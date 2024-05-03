@@ -1,7 +1,6 @@
 "use client";
 import { Libre_Barcode_128_Text } from "next/font/google";
 import { FunctionComponent, useRef } from "react";
-import { ShuffleBtn } from "./elements/shufflebtn";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 interface SpaceProps {}
@@ -44,13 +43,6 @@ const Space: FunctionComponent<SpaceProps> = () => {
           <br />
           using nextjs and tailwind.
         </p>
-        <ShuffleBtn
-          className={barcode.className + " text-[32px] h-fit z-50"}
-          href={"#services"}
-          newTab={false}
-        >
-          lets connect
-        </ShuffleBtn>
       </motion.div>
     </div>
   );
