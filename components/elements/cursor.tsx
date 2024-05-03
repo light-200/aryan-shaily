@@ -16,7 +16,7 @@ export function Cursor({
   const scope = useRef(null);
   const [isHover, setIsHover] = useState(false);
 
-  const cursorSize = 20;
+  const cursorSize = 40;
   const mouse = {
     x: useMotionValue(0),
     y: useMotionValue(0),

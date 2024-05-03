@@ -1,6 +1,5 @@
 "use client";
 
-import { ShuffleBtn } from "@/components/elements/shufflebtn";
 import { Cursor } from "@/components/elements/cursor";
 import { useRef } from "react";
 import { Libre_Barcode_128_Text } from "next/font/google";
@@ -15,29 +14,38 @@ export function Footer() {
   const ref = useRef(null);
   return (
     <>
-      <footer className="flex justify-between items-end p-2 lg:p-6 h-max lg:min-h-[200px]">
-        <div className="leading-snug">
-          <h3>
-            <i>Aryan-Shaily, </i> 2023
+      <footer
+        ref={ref}
+        className="flex justify-between rounded-[30px] bg-cardBg0 p-[15px] mt-[60px] mb-2"
+      >
+        <div className="flex flex-col h-[380px] justify-between">
+          <div className="grid gap-2">
+            <h2 className="text-3xl uppercase">
+              Wanna talk about your <br /> project?
+            </h2>
+            <p>
+              <span className="uppercase bg-black rounded-md text-white py-[.5px] px-2">
+                mail
+              </span>{" "}
+              <a href="mailto:aryanshaily123@gmail.com">
+                aryanshaily123@gmail.com
+              </a>
+            </p>
+          </div>
+          <h3 className="uppercase">
+            Copyright © <i>Aryan Shaily, </i> 2024
           </h3>
-
-          <p className="">all rights reserved</p>
         </div>
-
-        <a
-          className={
-            barcode.className +
-            " justify-self-end text-right text-[32px] group relative "
-          }
-          href={"https://www.linkedin.com/in/aryan-shaily"}
-          target={"_blank"}
-        >
-          <div
-            className="absolute top-0 left-0 group-hover:scale-x-[2.5] group-hover:scale-y-[10] w-full h-full"
-            ref={ref}
-          ></div>
-          lets connect
-        </a>
+        <div className="flex flex-col h-[380px] justify-end">
+          <div className="grid gap-2 uppercase relative group">
+            <a href="https://www.linkedin.com/in/aryan-shaily" target="_blank">
+              Linkedin
+            </a>
+            <a href="https://twitter.com/aryan_shaily" target="_blank">
+              Twitter
+            </a>
+          </div>
+        </div>
       </footer>
       <Cursor targetBtn={ref} />
     </>
