@@ -15,7 +15,7 @@
   }
   input,
   textarea {
-    @apply bg-inputBg rounded-[10px] h-[49px] p-4;
+    @apply bg-inputBg rounded-[15px] h-[49px] p-2;
   }
 
   section {

@@ -1,36 +1,23 @@
 "use client";
 import ProjectCard from "@/components/ProjectCard";
-import ServicesForm from "@/components/ServicesForm";
-import { SyntheticEvent, useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 
 export default function Index() {
-  const [service, setService] = useState("");
   const landing = useRef(null);
-
-  const handleServiceSelection = (e: SyntheticEvent) => {
-    setService(e.currentTarget.innerHTML);
-  };
 
   return (
     <main className="w-full overflow-x-hidden">
       <section ref={landing} className="grid place-content-center h-[70vh]">
         <div className="flex flex-col justify-center text-center">
-          <h3 className="uppercase text-lg">Available for freelance</h3>
-          <h1 className="uppercase md:text-6xl text-4xl font-extrabold">
-            Web developer &<br /> designer
-          </h1>
+          <h1 className="uppercase text-6xl font-extrabold">Work</h1>
         </div>
       </section>
       <section
         className="grid place-content-center select-none grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-[10px]"
         id="project"
       >
-        <ProjectCard
-          href="#"
-          tag="Web"
-          className="pointer-events-none cursor-not-allowed"
-        >
+        <ProjectCard href="work/00" tag="Web">
           <Image
             src={"/w0.png"}
             alt="project image"
@@ -39,7 +26,7 @@ export default function Index() {
             objectPosition="bottom"
           />
         </ProjectCard>
-        <ProjectCard href="https://theindianscholar.com/" tag="Web">
+        <ProjectCard href="work/01" tag="Web">
           <Image
             src={"/w1.png"}
             alt="project image"
@@ -48,11 +35,7 @@ export default function Index() {
             objectPosition="bottom"
           />
         </ProjectCard>
-        <ProjectCard
-          href="#"
-          tag="Graphics"
-          className={"md:col-span-2 md:aspect-auto"}
-        >
+        <ProjectCard href="work/03" tag="Graphics">
           <Image
             src={"/g0.png"}
             alt="project image"

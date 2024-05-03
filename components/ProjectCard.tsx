@@ -20,11 +20,11 @@ const ProjectCard = ({
         className
       )}
     >
-      <Link href={href} target="_blank" className="select-text">
+      <Link href={href} className="select-text">
         {children}
       </Link>
       {tag && (
-        <div className="text-sm bg-[#0000004b] absolute rounded-[15px] w-[100px] text-center py-2 text-white">
+        <div className="text-sm bg-[#0000004b] absolute top-[15px] left-[15px] rounded-[15px] w-[100px] text-center py-2 text-white">
           {tag}
         </div>
       )}

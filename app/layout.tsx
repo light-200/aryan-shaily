@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/icon-dark.svg" sizes="any" />
+        <link rel="icon" href="icon-dark.svg" sizes="any" />
       </head>
       <body
         className={
@@ -34,7 +34,7 @@ export default function RootLayout({
         <div className="col-span-2 flex justify-between items-baseline w-full">
           <Link href={"/"} className="flex gap-1 select-none">
             <span className="text-lg">Aryan</span>
-            <img src="icon-dark.svg" alt="icon" />
+            <img src="/icon-dark.svg" alt="icon" />
           </Link>
           <div className="justify-self-end">
             <ul className="w-fit flex lg:gap-4 uppercase text-lg">

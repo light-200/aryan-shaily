@@ -2,13 +2,6 @@
 
 import { Cursor } from "@/components/elements/cursor";
 import { useRef } from "react";
-import { Libre_Barcode_128_Text } from "next/font/google";
-
-const barcode = Libre_Barcode_128_Text({
-  style: "normal",
-  subsets: ["latin"],
-  weight: "400",
-});
 
 export function Footer() {
   const ref = useRef(null);
@@ -16,11 +9,11 @@ export function Footer() {
     <>
       <footer
         ref={ref}
-        className="flex justify-between rounded-[30px] bg-cardBg0 p-[15px] mt-[60px] mb-2"
+        className="flex justify-between rounded-[30px] bg-cardBg0 p-6 mt-[60px] mb-2"
       >
         <div className="flex flex-col h-[380px] justify-between">
           <div className="grid gap-2">
-            <h2 className="text-3xl uppercase">
+            <h2 className="text-3xl uppercase font-semibold">
               Wanna talk about your <br /> project?
             </h2>
             <p>
@@ -37,7 +30,7 @@ export function Footer() {
           </h3>
         </div>
         <div className="flex flex-col h-[380px] justify-end">
-          <div className="grid gap-2 uppercase relative group">
+          <div className="grid gap-2 uppercase relative group font-semibold">
             <a href="https://www.linkedin.com/in/aryan-shaily" target="_blank">
               Linkedin
             </a>
