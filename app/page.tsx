@@ -3,14 +3,10 @@ import ProjectCard from "@/components/ProjectCard";
 import ServicesForm from "@/components/ServicesForm";
 import { SyntheticEvent, useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Lenis from "lenis";
 
 export default function Index() {
-  const [service, setService] = useState("");
   const landing = useRef(null);
-
-  const handleServiceSelection = (e: SyntheticEvent) => {
-    setService(e.currentTarget.innerHTML);
-  };
 
   return (
     <main className="w-full overflow-x-hidden">
@@ -26,11 +22,7 @@ export default function Index() {
         className="grid place-content-center select-none grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-[10px]"
         id="project"
       >
-        <ProjectCard
-          href="#"
-          tag="Web"
-          className="pointer-events-none cursor-not-allowed"
-        >
+        <ProjectCard href="work/00" tag="Web">
           <Image
             src={"/w0.png"}
             alt="project image"
@@ -45,7 +37,7 @@ export default function Index() {
             alt="project image"
             fill
             objectFit="cover"
-            objectPosition="bottom"
+            objectPosition="center"
           />
         </ProjectCard>
         <ProjectCard

@@ -2,6 +2,7 @@ import { Footer } from "@/components/footer";
 import "./globals.css";
 import { Inter, Libre_Barcode_128_Text } from "next/font/google";
 import Link from "next/link";
+import LenisScroll from "@/components/LenisScroll";
 
 const inter = Inter({
   style: "normal",
@@ -31,27 +32,29 @@ export default function RootLayout({
           " selection:text-black selection:bg-documentBg overflow-x-hidden snap-center md:p-[20px] p-2 h-screen"
         }
       >
-        <div className="col-span-2 flex justify-between items-baseline w-full">
-          <Link href={"/"} className="flex gap-1 select-none">
-            <span className="text-lg">Aryan</span>
-            <img src="/icon-dark.svg" alt="icon" />
-          </Link>
-          <div className="justify-self-end">
-            <ul className="w-fit flex lg:gap-4 uppercase text-lg">
-              <a href="/about" className="btn-primary">
-                About
-              </a>
-              <a href="/work" className="btn-primary">
-                Work
-              </a>
-              <a href="/contact" className="btn-primary">
-                Contact
-              </a>
-            </ul>
+        <LenisScroll>
+          <div className="col-span-2 flex justify-between items-baseline w-full">
+            <Link href={"/"} className="flex gap-1 select-none uppercase">
+              <span className="text-lg">Aryan</span>
+              <img src="/icon-dark.svg" alt="icon" />
+            </Link>
+            <div className="justify-self-end">
+              <ul className="w-fit flex lg:gap-4 uppercase text-lg">
+                <a href="/about" className="btn-primary">
+                  About
+                </a>
+                <a href="/work" className="btn-primary">
+                  Work
+                </a>
+                <a href="/contact" className="btn-primary">
+                  Contact
+                </a>
+              </ul>
+            </div>
           </div>
-        </div>
-        {children}
-        <Footer />
+          {children}
+          <Footer />
+        </LenisScroll>
       </body>
     </html>
   );

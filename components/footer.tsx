@@ -12,11 +12,11 @@ export function Footer() {
         className="flex justify-between rounded-[30px] bg-cardBg0 p-6 mt-[60px] mb-2"
       >
         <div className="flex flex-col h-[380px] justify-between">
-          <div className="grid gap-2">
+          <div className="grid gap-6">
             <h2 className="text-3xl uppercase font-semibold">
               Wanna talk about your <br /> project?
             </h2>
-            <p>
+            <p className="flex gap-2">
               <span className="uppercase bg-black rounded-md text-white py-[.5px] px-2">
                 mail
               </span>{" "}

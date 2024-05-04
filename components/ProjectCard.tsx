@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
+import Card from "./Card";
 
 const ProjectCard = ({
   href,
@@ -14,12 +15,7 @@ const ProjectCard = ({
   className?: string;
 }) => {
   return (
-    <div
-      className={twMerge(
-        "aspect-square overflow-hidden rounded-[30px] p-[15px] relative select-none",
-        className
-      )}
-    >
+    <Card className={className}>
       <Link href={href} className="select-text">
         {children}
       </Link>
@@ -28,7 +24,7 @@ const ProjectCard = ({
           {tag}
         </div>
       )}
-    </div>
+    </Card>
   );
 };
 
