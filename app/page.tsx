@@ -12,14 +12,20 @@ export default function Index() {
     <main className="w-full overflow-x-hidden">
       <section ref={landing} className="grid place-content-center h-[70vh]">
         <div className="flex flex-col justify-center text-center">
-          <h3 className="uppercase text-lg">Available for freelance</h3>
+          <h3 className="uppercase text-lg flex items-center justify-center gap-3">
+            <div className="grid place-items-center relative">
+              <span className="bg-black h-[8px] opacity-100 aspect-square rounded-full absolute" />
+              <span className="bg-black opacity-50 h-[10px] aspect-square rounded-full absolute animate-ping" />
+            </div>
+            Available for freelance
+          </h3>
           <h1 className="uppercase md:text-6xl text-4xl font-extrabold">
             Web developer &<br /> designer
           </h1>
         </div>
       </section>
       <section
-        className="grid place-content-center select-none grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-[10px]"
+        className="grid overflow-x-hidden place-content-center select-none grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-[10px]"
         id="project"
       >
         <ProjectCard href="work/00" tag="Web">

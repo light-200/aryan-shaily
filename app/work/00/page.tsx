@@ -15,7 +15,7 @@ export default function Index() {
         </div>
       </section>
       <section
-        className="grid place-content-center select-none grid-cols-1 md:grid-cols-2 gap-[10px] uppercase text-xl"
+        className="grid overflow-x-hidden place-content-center select-none grid-cols-1 md:grid-cols-2 gap-[10px] uppercase text-xl"
         id="project"
       >
         <ProjectCard

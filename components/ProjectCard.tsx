@@ -15,8 +15,11 @@ const ProjectCard = ({
   className?: string;
 }) => {
   return (
-    <Card className={className}>
-      <Link href={href} className="select-text">
+    <Card className={twMerge(className, "p-0 group")}>
+      <Link
+        href={href}
+        className="select-text scale-100 group-hover:scale-[1.05] transition-transform duration-500 ease-in-out"
+      >
         {children}
       </Link>
       {tag && (
@@ -24,6 +27,7 @@ const ProjectCard = ({
           {tag}
         </div>
       )}
+      <div className="absolute bg-[url(/gitter.png)] mix-blend-soft-light bg-repeat-round opacity-10 w-[200%] h-[200%] pointer-events-none"></div>
     </Card>
   );
 };

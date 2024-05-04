@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " selection:text-black selection:bg-documentBg overflow-x-hidden snap-center md:p-[20px] p-2 h-screen"
+          " selection:text-black selection:bg-documentBg overflow-x-hidden snap-center md:p-[20px] p-2 h-screen max-w-screen-2xl mx-auto"
         }
       >
         <LenisScroll>
