@@ -17,8 +17,6 @@ async function getData() {
 export default async function Index() {
   const data = await getData();
 
-  console.log(data);
-
   return (
     <main className="w-full overflow-x-hidden">
       <section className="grid place-content-center h-[60vh]">
@@ -32,7 +30,7 @@ export default async function Index() {
       >
         {data
           ? data.map((v: any) => (
-              <ProjectCard href={"work/" + v.id} tag={v.tag}>
+              <ProjectCard href={"work/" + v.id} tag={v.tag} key={v.id}>
                 {v?.mockup && (
                   <Image
                     src={urlForImage(v?.mockup)}

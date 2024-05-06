@@ -41,6 +41,7 @@ export default async function Index({
             alt="project image"
             width={1452}
             height={768}
+            priority
             objectFit="contain"
           />
         </ProjectCard>
