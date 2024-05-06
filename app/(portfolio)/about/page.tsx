@@ -1,6 +1,4 @@
 "use client";
-import ProjectCard from "@/components/ProjectCard";
-import ServicesForm from "@/components/ServicesForm";
 import { SyntheticEvent, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Card from "@/components/Card";
@@ -15,7 +13,7 @@ export default function Index() {
 
   return (
     <main className="w-full overflow-x-hidden">
-      <section ref={landing} className="grid place-content-center h-[70vh]">
+      <section ref={landing} className="grid place-content-center h-[60vh]">
         <div className="flex flex-col justify-center text-center">
           <h1 className="uppercase md:text-6xl text-4xl font-extrabold">
             Aryan Shaily

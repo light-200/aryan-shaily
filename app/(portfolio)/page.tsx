@@ -10,7 +10,7 @@ export default function Index() {
 
   return (
     <main className="w-full overflow-x-hidden">
-      <section ref={landing} className="grid place-content-center h-[70vh]">
+      <section ref={landing} className="grid place-content-center h-[60vh]">
         <div className="flex flex-col justify-center text-center">
           <h3 className="uppercase text-lg flex items-center justify-center gap-3">
             <div className="grid place-items-center relative">

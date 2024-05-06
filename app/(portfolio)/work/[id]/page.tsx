@@ -1,15 +1,28 @@
-"use client";
 import ProjectCard from "@/components/ProjectCard";
-import { useRef } from "react";
 import Image from "next/image";
 import Card from "@/components/Card";
+import { client } from "@/sanity/lib/client";
+import { urlForImage } from "@/sanity/lib/image";
+import { PortableText } from "@portabletext/react";
+import PortableTextComp from "@/components/PortableTextComp";
 
-export default function Index() {
-  const landing = useRef(null);
+async function getData(id: string) {
+  const query = `
+    *[_type=="project" && id=="${id}"]
+  `;
+  const data = await client.fetch(query);
+  return data[0];
+}
 
+export default async function Index({
+  params: { id },
+}: {
+  params: { id: string };
+}) {
+  const data = await getData(id);
   return (
     <main className="w-full overflow-x-hidden">
-      <section ref={landing} className="grid place-content-center h-[70vh]">
+      <section className="grid place-content-center h-[60vh]">
         <div className="flex flex-col justify-center text-center">
           <h1 className="uppercase text-6xl font-extrabold">Project</h1>
         </div>
@@ -24,10 +37,11 @@ export default function Index() {
           className="md:col-span-2 col-span-1 max-h-[600px] w-full bg-gradient-radial from-[#7e7e7e] to-[#353535] flex items-end p-0"
         >
           <Image
-            src={"/w0-cover.png"}
+            src={urlForImage(data.cover)}
             alt="project image"
             width={1452}
             height={768}
+            objectFit="contain"
           />
         </ProjectCard>
         <Card className="bg-cardBg0">
@@ -42,21 +56,8 @@ export default function Index() {
             objectPosition="bottom"
           />
         </ProjectCard>
-        <Card className="bg-cardBg0 flex flex-col gap-4 leading-snug">
-          <p>
-            Steploops is a company that provides IT consultancy to its clients.
-          </p>
-          <p>
-            They wanted a landing page that would make them come out like a
-            modern tech company that provides modern and meaningful solutions to
-            its customers.
-          </p>
-          <p>
-            I created a minimal and neat design for them, which reflects the
-            work that they do. It also makes them look like a tech company of
-            the new age. The website has clear call to action and description of
-            the services they provide.
-          </p>
+        <Card className="bg-cardBg0 flex flex-col gap-4 leading-snug prose">
+          <PortableTextComp content={data.projectDescription} />
         </Card>
         <Card className="flex justify-end items-end bg-cardBg0">
           <h2>Description</h2>

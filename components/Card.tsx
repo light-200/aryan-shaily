@@ -1,3 +1,4 @@
+"use client";
 import { animate, stagger } from "framer-motion";
 import { ReactNode, useEffect } from "react";
 import { twMerge } from "tailwind-merge";

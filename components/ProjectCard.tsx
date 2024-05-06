@@ -23,7 +23,7 @@ const ProjectCard = ({
         {children}
       </Link>
       {tag && (
-        <div className="text-sm bg-[#0000004b] absolute top-[15px] left-[15px] rounded-[15px] w-[100px] text-center py-2 text-white">
+        <div className="text-sm bg-[#0000004b] absolute top-[15px] left-[15px] rounded-[15px] w-[100px] text-center py-2 text-white capitalize">
           {tag}
         </div>
       )}
