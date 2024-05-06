@@ -37,7 +37,7 @@ export default async function Index({
           className="md:col-span-2 col-span-1 max-h-[600px] w-full bg-gradient-radial from-[#7e7e7e] to-[#353535] flex items-end p-0"
         >
           <Image
-            src={urlForImage(data.cover)}
+            src={urlForImage(data?.cover)}
             alt="project image"
             width={1452}
             height={768}
@@ -49,14 +49,14 @@ export default async function Index({
         </Card>
         <ProjectCard href="work/00" tag="Web">
           <Image
-            src={"/w0.png"}
+            src={urlForImage(data?.mockup)}
             alt="project image"
             fill
             objectFit="cover"
             objectPosition="bottom"
           />
         </ProjectCard>
-        <Card className="bg-cardBg0 flex flex-col gap-4 leading-snug prose">
+        <Card className="bg-cardBg0 flex flex-col gap-4 leading-snug">
           <PortableTextComp content={data.projectDescription} />
         </Card>
         <Card className="flex justify-end items-end bg-cardBg0">
@@ -67,7 +67,7 @@ export default async function Index({
         </Card>
         <Card className="bg-cardBg0 bg-gradient-radial from-[#515151] to-[#1a1a1a] grid place-content-center">
           <Image
-            src={"/w0-logo.png"}
+            src={urlForImage(data?.logo)}
             alt="project image"
             width={325}
             height={302}
