@@ -13,9 +13,12 @@
   h1 {
     @apply pb-1;
   }
+  h2 {
+    @apply text-lg font-medium;
+  }
   input,
   textarea {
-    @apply bg-inputBg rounded-[15px] h-[49px] p-2;
+    @apply bg-inputBg rounded-[15px] h-[49px] p-2 shrink;
   }
 
   section {

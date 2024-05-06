@@ -22,11 +22,11 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
     <form
       ref={form}
       method="post"
-      className="gap-2 p-5 flex flex-col bg-cardBg0 relative h-full"
+      className="gap-2 p-5 flex flex-col bg-cardBg0 relative h-full text-base text-black"
       onSubmit={handleSubmit}
     >
       <div className="flex flex-col lg:flex-row gap-2">
-        <fieldset className="flex flex-col flex-1">
+        <fieldset className="flex flex-col flex-1 gap-1">
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -41,7 +41,7 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
             placeholder="your name..."
           />
         </fieldset>
-        <div className="flex flex-col flex-1">
+        <div className="flex flex-col flex-1 gap-1">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -56,7 +56,7 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
           />
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-1">
         <label htmlFor="project">Project Type</label>
         <input
           type="text"
@@ -69,7 +69,7 @@ const ServicesForm: FunctionComponent<ServicesFormProps> = ({
         />
       </div>
 
-      <div className="lg:row-start-3 lg:col-span-2 flex flex-col select-none relative h-full">
+      <div className="lg:row-start-3 lg:col-span-2 flex flex-col select-none relative h-full gap-1">
         <label htmlFor="message">Message</label>
         <textarea
           name="message"

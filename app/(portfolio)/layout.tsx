@@ -34,7 +34,10 @@ export default function RootLayout({
       >
         <LenisScroll>
           <div className="col-span-2 flex justify-between items-baseline w-full">
-            <Link href={"/"} className="flex gap-1 select-none uppercase">
+            <Link
+              href={"/"}
+              className="flex gap-1 select-none uppercase py-1 px-2 rounded-md bg-cardBg0 shadow hover:shadow-sm transition-shadow duration-300"
+            >
               <span className="text-lg">Aryan</span>
               <img src="/icon-dark.svg" alt="icon" />
             </Link>

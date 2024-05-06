@@ -13,10 +13,10 @@ export function Footer() {
       >
         <div className="flex flex-col h-[380px] justify-between">
           <div className="grid gap-6">
-            <h2 className="text-3xl uppercase font-semibold">
+            <h2 className="text-xl md:text-3xl uppercase font-semibold">
               Wanna talk about your <br /> project?
             </h2>
-            <p className="flex gap-2">
+            <p className="flex gap-2 text-xs md:text-lg">
               <span className="uppercase bg-black rounded-md text-white py-[.5px] px-2">
                 mail
               </span>{" "}
@@ -25,7 +25,7 @@ export function Footer() {
               </a>
             </p>
           </div>
-          <h3 className="uppercase">
+          <h3 className="uppercase text-xs md:text-lg">
             Copyright © <i>Aryan Shaily, </i> 2024
           </h3>
         </div>
