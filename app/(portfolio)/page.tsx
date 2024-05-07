@@ -1,16 +1,36 @@
 "use client";
 import ProjectCard from "@/components/ProjectCard";
-import ServicesForm from "@/components/ServicesForm";
-import { SyntheticEvent, useEffect, useRef, useState } from "react";
+import { client } from "@/sanity/lib/client";
+import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
-import Lenis from "lenis";
+import { useEffect, useState } from "react";
 
 export default function Index() {
-  const landing = useRef(null);
+  const [data, setData] = useState<null | []>(null);
+  async function getRecentPosts() {
+    const query = `
+      *[_type=="project"] | order(releaseDate desc) | order(_createdAt desc)
+    `;
+    const data = client.fetch(query);
+    return data;
+  }
+
+  useEffect(() => {
+    async function getData() {
+      try {
+        const data = await getRecentPosts();
+        setData(data);
+      } catch (error) {
+        console.log(error);
+        alert("failed to fetch data!");
+      }
+    }
+    getData();
+  }, []);
 
   return (
     <main className="w-full overflow-x-hidden">
-      <section ref={landing} className="grid place-content-center h-[60vh]">
+      <section className="grid place-content-center h-[60vh]">
         <div className="flex flex-col justify-center text-center">
           <h3 className="uppercase text-lg flex items-center justify-center gap-3">
             <div className="grid place-items-center relative">
@@ -25,40 +45,50 @@ export default function Index() {
         </div>
       </section>
       <section
-        className="grid overflow-x-hidden place-content-center select-none grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-[10px]"
+        className="grid overflow-x-hidden place-content-center select-none grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-[10px] min-h-screen"
         id="project"
       >
-        <ProjectCard href="work/00" tag="Web">
-          <Image
-            src={"/w0.png"}
-            alt="project image"
-            fill
-            objectFit="cover"
-            objectPosition="bottom"
-          />
-        </ProjectCard>
-        <ProjectCard href="https://theindianscholar.com/" tag="Web">
-          <Image
-            src={"/w1.png"}
-            alt="project image"
-            fill
-            objectFit="cover"
-            objectPosition="center"
-          />
-        </ProjectCard>
-        <ProjectCard
-          href="#"
-          tag="Graphics"
-          className={"md:col-span-2 md:aspect-auto"}
-        >
-          <Image
-            src={"/g0.png"}
-            alt="project image"
-            fill
-            objectFit="cover"
-            objectPosition="center"
-          />
-        </ProjectCard>
+        {data &&
+          data
+            .filter((v: any) => v.tag == "web")
+            .map((v: any) => {
+              return (
+                <ProjectCard href={"work/" + v.id} tag={v.tag} key={v.id}>
+                  {v?.mockup && (
+                    <Image
+                      src={urlForImage(v?.mockup)}
+                      alt="project image"
+                      fill
+                      priority
+                      objectFit="cover"
+                      objectPosition="bottom"
+                    />
+                  )}
+                </ProjectCard>
+              );
+            })}
+        {data &&
+          [data.filter((v: any) => v.tag == "graphics")[0]].map((v: any) => {
+            return (
+              <ProjectCard
+                href={"work/" + v.id}
+                tag={v.tag}
+                key={v.id}
+                className="md:col-span-2 md:aspect-auto"
+              >
+                {v?.mockup && (
+                  <Image
+                    src={urlForImage(v?.mockup)}
+                    alt="project image"
+                    fill
+                    priority
+                    objectFit="cover"
+                    objectPosition="bottom"
+                  />
+                )}
+              </ProjectCard>
+            );
+          })}
       </section>
     </main>
   );
