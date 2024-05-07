@@ -1,5 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import ProjectWeb from "@/components/ProjectViewWeb";
+import ProjectGraphics from "@/components/ProjectViewGraphics";
 
 async function getData(id: string) {
   const query = `
@@ -20,7 +21,7 @@ export default async function Index({
 
   switch (data?.tag) {
     case "graphics":
-      render = "comming soon!!";
+      render = <ProjectGraphics data={data} />;
       break;
 
     default:
@@ -35,6 +36,7 @@ export default async function Index({
           <h1 className="uppercase text-6xl font-extrabold">Project</h1>
         </div>
       </section>
+      {render}
     </main>
   );
 }
