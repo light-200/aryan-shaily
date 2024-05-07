@@ -1,32 +1,18 @@
-"use client";
 import ProjectCard from "@/components/ProjectCard";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
-export default function Index() {
-  const [data, setData] = useState<null | []>(null);
-  async function getRecentPosts() {
-    const query = `
+async function getRecentPosts() {
+  const query = `
       *[_type=="project"] | order(releaseDate desc) | order(_createdAt desc)
     `;
-    const data = client.fetch(query);
-    return data;
-  }
+  const data = client.fetch(query);
+  return data;
+}
 
-  useEffect(() => {
-    async function getData() {
-      try {
-        const data = await getRecentPosts();
-        setData(data);
-      } catch (error) {
-        console.log(error);
-        alert("failed to fetch data!");
-      }
-    }
-    getData();
-  }, []);
+export default async function Index() {
+  const data = await getRecentPosts();
 
   return (
     <main className="w-full overflow-x-hidden">
