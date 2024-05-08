@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
+import Title from "@/components/Title";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
@@ -25,9 +26,9 @@ export default async function Index() {
             </div>
             Available for freelance
           </h3>
-          <h1 className="uppercase md:text-6xl text-4xl font-extrabold">
+          <Title>
             Web developer &<br /> designer
-          </h1>
+          </Title>
         </div>
       </section>
       <section

@@ -21,7 +21,7 @@ export default function ProjectWeb({ data }: any) {
       </Card>
       <div className="flex flex-col md:flex-row gap-[10px]">
         <Card className="bg-cardBg0">
-          <h2>Steploops redesign</h2>
+          <h2>{data?.title}</h2>
         </Card>
         <Card>
           <Image

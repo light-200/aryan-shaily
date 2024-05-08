@@ -1,6 +1,7 @@
 import { client } from "@/sanity/lib/client";
 import ProjectWeb from "@/components/ProjectViewWeb";
 import ProjectGraphics from "@/components/ProjectViewGraphics";
+import Title from "@/components/Title";
 
 async function getData(id: string) {
   const query = `
@@ -33,7 +34,7 @@ export default async function Index({
     <main className="w-full overflow-x-hidden">
       <section className="grid place-content-center h-[60vh]">
         <div className="flex flex-col justify-center text-center">
-          <h1 className="uppercase text-6xl font-extrabold">Project</h1>
+          <Title>Project</Title>
         </div>
       </section>
       {render}

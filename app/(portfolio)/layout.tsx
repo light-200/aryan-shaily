@@ -1,12 +1,24 @@
 import { Footer } from "@/components/footer";
 import "./globals.css";
-import { Inter, Libre_Barcode_128_Text } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import Link from "next/link";
 import LenisScroll from "@/components/LenisScroll";
 
-const inter = Inter({
+const dmsans = DM_Sans({
   style: "normal",
   subsets: ["latin"],
+  weight: [
+    "100",
+    "200",
+    "300",
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+    "900",
+    "1000",
+  ],
 });
 
 export const metadata = {
@@ -28,7 +40,7 @@ export default function RootLayout({
       </head>
       <body
         className={
-          inter.className +
+          dmsans.className +
           " selection:text-black selection:bg-documentBg overflow-x-hidden snap-center md:p-[20px] p-2 h-screen max-w-screen-2xl mx-auto"
         }
       >

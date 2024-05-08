@@ -2,6 +2,7 @@
 import { SyntheticEvent, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Card from "@/components/Card";
+import Title from "@/components/Title";
 
 export default function Index() {
   const [service, setService] = useState("");
@@ -15,12 +16,10 @@ export default function Index() {
     <main className="w-full overflow-x-hidden">
       <section ref={landing} className="grid place-content-center h-[60vh]">
         <div className="flex flex-col justify-center text-center">
-          <h1 className="uppercase md:text-6xl text-4xl font-extrabold">
-            Aryan Shaily
-          </h1>
+          <Title>Aryan Shaily</Title>
         </div>
       </section>
-      <section className="grid place-content-center select-none grid-cols-1 md:grid-cols-2 gap-[10px] uppercase text-xl">
+      <section className="grid overflow-x-hidden place-content-center select-none grid-cols-1 md:grid-cols-2 gap-[10px] uppercase text-xl">
         <Card className="flex justify-end items-end bg-cardBg0">
           <h3>Aryan Shaily, 22</h3>
         </Card>

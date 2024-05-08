@@ -4,6 +4,7 @@ import ServicesForm from "@/components/ServicesForm";
 import { SyntheticEvent, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Card from "@/components/Card";
+import Title from "@/components/Title";
 
 export default function Index() {
   const [service, setService] = useState("");
@@ -18,12 +19,10 @@ export default function Index() {
       <section ref={landing} className="grid place-content-center h-[60vh]">
         <div className="flex flex-col justify-center text-center">
           <h3 className="uppercase text-lg">Aryan Shaily</h3>
-          <h1 className="uppercase md:text-6xl text-4xl font-extrabold">
-            Lets talk
-          </h1>
+          <Title>Lets talk</Title>
         </div>
       </section>
-      <section className="grid place-content-center select-none grid-cols-1 lg:grid-cols-2 gap-[10px]">
+      <section className="grid overflow-x-hidden place-content-center select-none grid-cols-1 lg:grid-cols-2 gap-[10px]">
         <Card className="p-0 aspect-auto lg:aspect-square">
           <ServicesForm />
         </Card>

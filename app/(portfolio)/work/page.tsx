@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
+import Title from "@/components/Title";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 import Image from "next/image";
@@ -21,11 +22,11 @@ export default async function Index() {
     <main className="w-full overflow-x-hidden">
       <section className="grid place-content-center h-[60vh]">
         <div className="flex flex-col justify-center text-center">
-          <h1 className="uppercase text-6xl font-extrabold">Work</h1>
+          <Title>Work</Title>
         </div>
       </section>
       <section
-        className="grid overflow-x-hidden place-content-center select-none grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-[10px]"
+        className="grid overflow-x-hidden place-content-center select-none grid-cols-1 md:grid-cols-2 gap-[10px]"
         id="project"
       >
         {data
