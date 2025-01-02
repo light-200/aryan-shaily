@@ -1,0 +1,41 @@
+---
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+
+		<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap" />
+
+		<title>Aryan Shaily</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		width: 100%;
+		height: 100%;
+		font-family: "Red Hat Mono", sans-serif;
+	}
+
+	#main {
+		padding: 5px;
+	}
+
+</style>

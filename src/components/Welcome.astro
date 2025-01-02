@@ -1,0 +1,18 @@
+---
+
+---
+
+<section id="main">
+	<h3>Aryan Shaily' <span id="age"></span></h3>
+	<p>I'm a Software Engineer based in India.</p>
+</section>
+
+
+<script>
+	const ageContainer = document.querySelector("#age");
+	const year = new Date().getFullYear();
+	const yob = 2002;
+	const age = year - yob;
+
+	ageContainer?.insertAdjacentHTML('beforeend',age.toString())
+</script>
