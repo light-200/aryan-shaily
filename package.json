@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/vercel": "^8.0.1",
     "astro": "^5.1.2",
     "astro-google-fonts-optimizer": "^0.2.2"
   }
